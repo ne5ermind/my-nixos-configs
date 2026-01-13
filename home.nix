@@ -1,0 +1,306 @@
+{ pkgs, inputs, ... }:
+
+{
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.default
+    ./modules/nixvim.nix
+    ./modules/hyprland.nix
+  ];
+
+  home = {
+    username = "never";
+    homeDirectory = "/home/never";
+    stateVersion = "25.11";
+
+    packages = with pkgs; [
+      telegram-desktop
+      pkgs.bibata-cursors
+      bat
+      eza
+      fd
+      starship
+      neo
+      cava
+      inputs.zen-browser.packages."${pkgs.system}".default
+      wpsoffice-cn
+      mangohud
+      protonup-ng
+      steam
+    ];
+
+    pointerCursor = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 24;
+      gtk.enable = true;
+      x11.enable = true;
+    };
+
+    sessionVariables = {
+      BROWSER = "zen";
+      STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
+    };
+  };
+
+  programs = {
+    fastfetch = {
+      enable = true;
+      settings = {
+        logo = {
+          source = ./images/fastfetch-logo.png;
+          type = "kitty";
+          width = 18;
+          height = 8;
+          padding = {
+            top = 2;
+            left = 2;
+          };
+        };
+        display = {
+          separator = " ";
+        };
+        modules = [
+          {
+            type = "custom";
+            format = " ";
+          }
+          {
+            type = "custom";
+            format = "╭───────────╮";
+          }
+          {
+            type = "title";
+            key = "{#0}│ {#31} user    {#0}│";
+            format = "{1}";
+          }
+          {
+            type = "title";
+            key = "{#0}│ {#32}󰇅 hname   {#0}│";
+            format = "{2}";
+          }
+          {
+            type = "uptime";
+            key = "{#0}│ {#33}󰅐 uptime  {#0}│";
+          }
+          {
+            type = "os";
+            key = "{#0}│ {#34} distro  {#0}│";
+          }
+          {
+            type = "kernel";
+            key = "{#0}│ {#35} kernel  {#0}│";
+          }
+          {
+            type = "wm";
+            key = "{#0}│ {#36} wm      {#0}│";
+          }
+          {
+            type = "terminal";
+            key = "{#0}│ {#31} term    {#0}│";
+          }
+          {
+            type = "shell";
+            key = "{#0}│ {#32} shell   {#0}│";
+          }
+          {
+            type = "custom";
+            format = "├───────────┤";
+          }
+          {
+            type = "colors";
+            key = "{#0}│ {#39} colors  {#0}│";
+            symbol = "circle";
+          }
+          {
+            type = "custom";
+            format = "╰───────────╯";
+          }
+        ];
+      };
+    };
+
+    cava = {
+      enable = true;
+      settings = {
+        general.framerate = 120;
+        input.method = "pipewire";
+        color = {
+          gradient = 1;
+          gradient_count = 2;
+          gradient_color_1 = "'#4E5754'";
+          gradient_color_2 = "'#ffffff'";
+        };
+        smoothing.monstercat = 1;
+      };
+    };
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
+        add_newline = true;
+        command_timeout = 1300;
+        scan_timeout = 50;
+        format = ''
+          [╭────](white)$directory$nix_shell
+          [╰─](white)$character'';
+        right_format = "$git_branch";
+        directory = {
+          format = "[ $path ]($style) [ ](bold cyan) ";
+          style = "white";
+          truncation_length = 3;
+        };
+        character = {
+          success_symbol = "[ >](white) ";
+          error_symbol = "[ >](bold red) ";
+        };
+        git_branch = {
+          symbol = "     ";
+          format = "[$branch$symbol]($style) ";
+        };
+      };
+    };
+
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      history.size = 10000;
+      historySubstringSearch.enable = true;
+      shellAliases = {
+        ls = "eza --icons --group-directories-first";
+        ll = "eza -lh --icons --grid";
+        cat = "bat";
+        btw = "echo 'i use nixos btw'";
+        update = "sudo nixos-rebuild switch --flake /etc/nixos#nevernix";
+        cfg = "cd /etc/nixos";
+        matrix = "neo --colormode=0 -a -f 120 -S 7 -D ";
+        ff = "fastfetch";
+        check = "ollama run qwen2.5:3b";
+      };
+      loginExtra = ''
+        if [ "$(tty)" = "/dev/tty1" ]; then
+          exec Hyprland
+        fi
+        eval "$(starship init zsh)"
+      '';
+    };
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
+    spicetify = {
+      enable = true;
+      theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.lucid;
+      enabledExtensions = with inputs.spicetify-nix.legacyPackages.${pkgs.system}.extensions; [
+        adblock
+        shuffle
+        hidePodcasts
+        fullAppDisplay
+      ];
+      enabledCustomApps = with inputs.spicetify-nix.legacyPackages.${pkgs.system}.apps; [
+        newReleases
+        lyricsPlus
+      ];
+    };
+
+    kitty = {
+      enable = true;
+      font = {
+        name = "JetBrainsMono Nerd Font";
+        size = 10;
+      };
+      settings = {
+        shell = "zsh";
+        remember_window_size = "no";
+        initial_window_width = 950;
+        initial_window_height = 500;
+        cursor_blink_interval = "0.5";
+        cursor_stop_blinking_after = 1;
+        scrollback_lines = 2000;
+        wheel_scroll_min_lines = 1;
+        enable_audio_bell = "no";
+        window_padding_width = 10;
+        hide_window_decorations = "yes";
+        background_opacity = "0.6";
+        dynamic_background_opacity = "yes";
+        confirm_os_window_close = 0;
+        allow_remote_control = "yes";
+      };
+      extraConfig = ''
+        tab_bar_edge            top
+        tab_bar_style           powerline
+        tab_powerline_style     slanted
+        tab_bar_align           left
+        tab_bar_min_tabs        2
+        tab_bar_margin_width    0.0
+        tab_bar_margin_height   2.5 1.5
+        tab_bar_margin_color    #131313
+        tab_bar_background      #131313
+        active_tab_foreground   #000000
+        active_tab_background   #d4d4d4
+        active_tab_font_style   bold
+        inactive_tab_foreground #c6c6c6
+        inactive_tab_background #131313
+        inactive_tab_font_style normal
+        tab_activity_symbol     " ● "
+        tab_numbers_style       1
+        tab_title_template      "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title[:30]}{title[30:] and '…'} [{index}]"
+        active_tab_title_template "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title[:30]}{title[30:] and '…'} [{index}]"
+
+        background            #131313
+        foreground            #d6dae4
+        cursor                #b9b9b9
+        selection_background  #1f1f1f
+        color0                #16181a
+        color8                #3c4048
+        color1                #ff6e5e
+        color9                #ff6e5e
+        color2                #5eff6c
+        color10               #5eff6c
+        color3                #f1ff5e
+        color11               #f1ff5e
+        color4                #5ea1ff
+        color12               #5ea1ff
+        color5                #bd5eff
+        color13               #bd5eff
+        color6                #5ef1ff
+        color14               #5ef1ff
+        color7                #ffffff
+        color15               #ffffff
+        selection_foreground #131313
+
+        # START_AUTOGENERATED_TAB_STYLE
+        # Feel free to update these colors manually and remove these comments.
+        active_tab_foreground   #eeeeee
+        active_tab_background   #1f1f1f
+        inactive_tab_foreground #d6dae4
+        inactive_tab_background #0f0f0f
+        # END_AUTOGENERATED_TAB_STYLE
+      '';
+    };
+  };
+
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "zen.desktop";
+      "x-scheme-handler/http" = "zen.desktop";
+      "x-scheme-handler/https" = "zen.desktop";
+      "x-scheme-handler/about" = "zen.desktop";
+      "x-scheme-handler/unknown" = "zen.desktop";
+    };
+  };
+}
