@@ -23,10 +23,20 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zapret-discord-youtube = {
+      url = "github:kartavkun/zapret-discord-youtube";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+    {
+      nixpkgs,
+      home-manager,
+      zapret-discord-youtube,
+      ...
+    }@inputs:
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
         modules = [
@@ -42,6 +52,13 @@
               extraSpecialArgs = {
                 inherit inputs;
               };
+            };
+          }
+          zapret-discord-youtube.nixosModules.default
+          {
+            services.zapret-discord-youtube = {
+              enable = true;
+              config = "general(ALT)";
             };
           }
         ];

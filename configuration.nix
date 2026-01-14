@@ -32,7 +32,7 @@
       waybar
       kitty
       git
-      zapret
+      # zapret
     ];
 
     variables = {
@@ -53,22 +53,22 @@
       ];
     };
 
-    zapret = {
-      enable = true;
-      params = [
-        "--dpi-desync=fake,disorder2"
-        "--dpi-desync-ttl=1"
-        "--dpi-desync-autottl=2"
-      ];
-      whitelist = [
-        "youtube.com"
-        "googlevideo.com"
-        "ytimg.com"
-        "youtu.be"
-        "discord-attachmets-uploads-prd.storage.googleapis.com"
-        "googleapis.com"
-      ];
-    };
+    #   zapret = {
+    #     enable = true;
+    #     params = [
+    #       "--dpi-desync=fake,disorder2"
+    #       "--dpi-desync-ttl=1"
+    #       "--dpi-desync-autottl=2"
+    #     ];
+    #     whitelist = [
+    #       "youtube.com"
+    #       "googlevideo.com"
+    #       "ytimg.com"
+    #       "youtu.be"
+    #       "discord-attachmets-uploads-prd.storage.googleapis.com"
+    #       "googleapis.com"
+    #     ];
+    #   };
   };
 
   networking = {
