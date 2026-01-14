@@ -10,6 +10,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
   time.timeZone = "Europe/Moscow";
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   nix = {
     settings = {
       auto-optimise-store = true;
