@@ -13,6 +13,10 @@
   nix = {
     settings = {
       auto-optimise-store = true;
+      substituters = [
+        "mirror.yandex.ru"
+        "https://cache.nixos.org"
+      ];
       experimental-features = [
         "nix-command"
         "flakes"
