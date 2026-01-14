@@ -23,9 +23,6 @@
       cava
       inputs.zen-browser.packages."${pkgs.system}".default
       wpsoffice-cn
-      mangohud
-      protonup-ng
-      steam
     ];
 
     pointerCursor = {
@@ -142,8 +139,8 @@
         command_timeout = 1300;
         scan_timeout = 50;
         format = ''
-          [╭────](white)$directory$nix_shell
-          [╰─](white)$character'';
+          (white)$directory$nix_shell(white)$character
+        '';
         right_format = "$git_branch";
         directory = {
           format = "[ $path ]($style) [ ](bold cyan) ";

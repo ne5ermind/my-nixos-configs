@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/hardware/additional-config.nix
+    # ./modules/hardware/additional-config.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -38,11 +38,6 @@
 
   programs = {
     # firefox.enable = true;
-
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-    };
 
     gamemode.enable = true;
 
