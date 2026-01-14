@@ -198,6 +198,7 @@
 
       "exec-once" = [
         "dms run"
+        "kitty zsh -c 'fastfetch; exec zsh'"
         # "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
     };
