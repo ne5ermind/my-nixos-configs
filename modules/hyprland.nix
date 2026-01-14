@@ -4,6 +4,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    systemd.enable = false;
 
     settings = {
       monitor = [
@@ -195,6 +196,7 @@
 
       "exec-once" = [
         "dms run"
+        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
     };
   };
