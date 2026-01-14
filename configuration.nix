@@ -8,10 +8,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "nevernix";
-  networking.networkmanager.enable = true;
   time.timeZone = "Europe/Moscow";
-  services.getty.autologinUser = "never";
 
   nix = {
     settings = {
@@ -21,6 +18,7 @@
         "flakes"
       ];
     };
+
     gc = {
       automatic = true;
       dates = "weekly";
@@ -28,12 +26,55 @@
     };
   };
 
-  services.ollama = {
-    enable = true;
-    package = pkgs.ollama-cpu;
-    loadModels = [
-      "qwen2.5:3b"
+  environment = {
+    systemPackages = with pkgs; [
+      wget
+      waybar
+      kitty
+      git
+      zapret
     ];
+
+    variables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+      SUDO_EDITOR = "nvim";
+    };
+  };
+
+  services = {
+    getty.autologinUser = "never";
+
+    ollama = {
+      enable = true;
+      package = pkgs.ollama-cpu;
+      loadModels = [
+        "qwen2.5:3b"
+      ];
+    };
+
+    zapret = {
+      enable = true;
+      params = [
+        "--dpi-desync=fake,disorder2"
+        "--dpi-desync-ttl=1"
+        "--dpi-desync-autottl=2"
+      ];
+      whitelist = [
+        "youtube.com"
+        "googlevideo.com"
+        "ytimg.com"
+        "youtu.be"
+        "discord-attachmets-uploads-prd.storage.googleapis.com"
+        "googleapis.com"
+      ];
+    };
+  };
+
+  networking = {
+    hostName = "nevernix";
+    networkmanager.enable = true;
+    firewall.enable = true;
   };
 
   programs = {
@@ -62,13 +103,6 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    wget
-    waybar
-    kitty
-    git
-  ];
-
   users.users.never = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
@@ -82,17 +116,6 @@
     roboto
     nerd-fonts.jetbrains-mono
   ];
-
-  environment.variables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
-    SUDO_EDITOR = "nvim";
-  };
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
 
   system.stateVersion = "25.11";
 }
