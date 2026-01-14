@@ -8,9 +8,8 @@
 
     settings = {
       monitor = [
-        #       "eDP-1,2880x1800@120,0x0,1"
-        #       "HDMI-A-1,3840x2160@60,2880x0,1"
-        ",preferred,auto,1"
+        "eDP-1,2880x1800@120,0x0,1"
+        "HDMI-A-1,3840x2160@60,2880x0,1"
       ];
 
       "$terminal" = "kitty";

@@ -226,7 +226,7 @@
       };
       loginExtra = ''
         if [ "$(tty)" = "/dev/tty1" ]; then
-          exec start-hyprland
+          exec hyprland
         fi
         eval "$(starship init zsh)"
       '';
