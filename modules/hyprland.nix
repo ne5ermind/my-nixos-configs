@@ -8,8 +8,9 @@
 
     settings = {
       monitor = [
-        "eDP-1,2880x1800@120,0x0,1"
-        "HDMI-A-1,3840x2160@60,2880x0,1"
+        #       "eDP-1,2880x1800@120,0x0,1"
+        #       "HDMI-A-1,3840x2160@60,2880x0,1"
+        ",preferred,auto,1"
       ];
 
       "$terminal" = "kitty";
@@ -21,6 +22,8 @@
         "XCURSOR_SIZE,18"
         "SDL_VIDEODRIVER,wayland"
         "NIXOS_OZONE_WL,1"
+        "WLR_RENDERER_ALLOW_SOFTWARE,1"
+        "CLUTTER_BACKEND,wayland"
       ];
 
       general = {
@@ -32,10 +35,6 @@
         border_size = 1;
         "col.active_border" = "rgba(333333ff)";
         "col.inactive_border" = "rgba(00000000)";
-      };
-
-      render = {
-        direct_scanout = false;
       };
 
       decoration = {
