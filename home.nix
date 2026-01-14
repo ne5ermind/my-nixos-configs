@@ -170,7 +170,7 @@
 
         git_status = {
           style = "bold red";
-          format = "[[ $all_status$ahead_behind ]]($style)";
+          format = "([⎪$all_status$ahead_behind⎥]($style) )";
         };
 
         cmd_duration = {

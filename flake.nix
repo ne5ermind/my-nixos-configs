@@ -57,7 +57,7 @@
           zapret-discord-youtube.nixosModules.default
           {
             services.zapret-discord-youtube = {
-              enable = true;
+              enable = false;
               config = "general(ALT)";
             };
           }
