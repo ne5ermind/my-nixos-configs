@@ -224,12 +224,12 @@
         ff = "fastfetch";
         check = "ollama run qwen2.5:3b";
       };
-      loginExtra = ''
-        if [ "$(tty)" = "/dev/tty1" ]; then
-          exec Hyprland
-        fi
-        eval "$(starship init zsh)"
-      '';
+      #     loginExtra = ''
+      #       if [ "$(tty)" = "/dev/tty1" ]; then
+      #         exec Hyprland
+      #       fi
+      #       eval "$(starship init zsh)"
+      #     '';
     };
 
     direnv = {
