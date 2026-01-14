@@ -74,7 +74,7 @@
   networking = {
     hostName = "nevernix";
     networkmanager.enable = true;
-    firewall.enable = true;
+    firewall.enable = false;
   };
 
   programs = {

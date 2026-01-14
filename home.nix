@@ -143,8 +143,8 @@
 
         directory = {
           style = "bold blue";
-          truncation_length = 3;
-          truncation_symbol = "…/";
+          #         truncation_length = 3;
+          #         truncation_symbol = "…/";
           repo_root_style = "bold bright-blue";
           format = "[$path]($style)[$read_only]($read_only_style) ";
         };
@@ -171,6 +171,16 @@
         git_status = {
           style = "bold red";
           format = "([⎪$all_status$ahead_behind⎥]($style) )";
+          conflicted = "◪◦";
+          ahead = "▴";
+          behind = "▿";
+          diverged = "◇";
+          untracked = "◌◦";
+          stashed = "◃◈";
+          modified = "●◦";
+          staged = "▪️";
+          renamed = "◎◦";
+          deleted = "✕";
         };
 
         cmd_duration = {
