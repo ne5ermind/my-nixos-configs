@@ -34,6 +34,10 @@
         "col.inactive_border" = "rgba(00000000)";
       };
 
+      render = {
+        direct_scanout = false;
+      };
+
       decoration = {
         rounding = 10;
         active_opacity = 0.9;
