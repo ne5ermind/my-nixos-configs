@@ -82,6 +82,14 @@
     firewall.enable = false;
   };
 
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   programs = {
     # firefox.enable = true;
 
@@ -110,7 +118,10 @@
 
   users.users.never = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       tree
