@@ -742,6 +742,32 @@
         options.desc = "Reevaluate all cells";
       }
 
+      # DB control
+      {
+        mode = "n";
+        key = "<leader>db";
+        action = ":DBUIToggle<CR>";
+        options.desc = "Toggle dadbod UI";
+      }
+      {
+        mode = "n";
+        key = "<leader>S";
+        action = "<Plug>(DBUI_ExecuteQuery)";
+        options.desc = "Execute cuurent query";
+      }
+      {
+        mode = "v";
+        key = "<leader>S";
+        action = ":DB<CR>";
+        options.desc = "execute selected SQL code";
+      }
+      {
+        mode = "n";
+        key = "<leader>dc";
+        action = ":pc<CR>";
+        options.desc = "Close results preview window";
+      }
+
       # Other things
       {
         mode = "n";
@@ -873,6 +899,9 @@
 
       # Scroll settings
       scrolloff = 10;
+
+      # Allow additional config from local files
+      exrc = true;
     };
 
     extraPackages = with pkgs; [
