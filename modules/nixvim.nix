@@ -45,6 +45,8 @@
             { name = "nvim_lsp"; }
             { name = "path"; }
             { name = "buffer"; }
+            { name = "vim-dadbod-completion"; }
+            { name = "buffer"; }
           ];
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
@@ -92,6 +94,18 @@
               Rule("{", "}", "-nix")
           })
         '';
+      };
+
+      vim-dadbod = {
+        enable = true;
+      };
+
+      vim-dadbod-ui = {
+        enable = true;
+      };
+
+      vim-dadbod-completion = {
+        enable = true;
       };
 
       mini = {
