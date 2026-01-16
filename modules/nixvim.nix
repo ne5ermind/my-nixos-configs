@@ -223,7 +223,6 @@
           nix = [ "statix" ];
           python = [ "pylint" ];
           lua = [ "selene" ];
-          markdown = [ "vale" ];
         };
         autoCmd = {
           callback.__raw = ''
