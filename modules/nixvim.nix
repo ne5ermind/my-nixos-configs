@@ -46,7 +46,6 @@
             { name = "path"; }
             { name = "buffer"; }
             { name = "vim-dadbod-completion"; }
-            { name = "buffer"; }
           ];
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
