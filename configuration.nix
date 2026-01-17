@@ -8,6 +8,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelModules = [ "xt_TPROXY" ];
   time.timeZone = "Europe/Moscow";
 
   hardware.graphics = {
