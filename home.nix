@@ -301,7 +301,7 @@
         background #F2F2F2
         foreground #000000
         cursor #6fd2fc
-        selection_background #6fd2fc
+        selection_background #000000
         color0 #000000
         color8 #000000
         color1 #000000
