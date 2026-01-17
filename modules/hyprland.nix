@@ -54,7 +54,7 @@
         shadow = {
           enabled = true;
           range = 10;
-          render_power = 2;
+          render_power = 4;
           color = "0x33000000";
         };
       };
@@ -67,6 +67,7 @@
           "winOut, 0.3, -0.3, 0, 1"
           "liner, 1, 1, 1, 1"
         ];
+
         animation = [
           "windows, 1, 6, wind, slide"
           "windowsIn, 1, 6, winIn, slide"
@@ -83,6 +84,7 @@
         pseudotile = true;
         preserve_split = true;
       };
+
       master = {
         new_status = "master";
       };
