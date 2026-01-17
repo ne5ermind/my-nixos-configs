@@ -24,6 +24,7 @@
       inputs.zen-browser.packages."${pkgs.system}".default
       wpsoffice-cn
       dbeaver-bin
+      v2raya
     ];
 
     pointerCursor = {
