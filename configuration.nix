@@ -50,6 +50,10 @@
   services = {
     getty.autologinUser = "never";
 
+    v2raya = {
+      enable = true;
+    };
+
     ollama = {
       enable = true;
       package = pkgs.ollama-cpu;
