@@ -272,7 +272,7 @@
         enable_audio_bell = "no";
         window_padding_width = 10;
         hide_window_decorations = "yes";
-        background_opacity = "0.6";
+        background_opacity = "1";
         dynamic_background_opacity = "yes";
         confirm_os_window_close = 0;
         allow_remote_control = "yes";
