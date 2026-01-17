@@ -25,6 +25,7 @@
       wpsoffice-cn
       dbeaver-bin
       v2raya
+      geeqie
     ];
 
     pointerCursor = {
