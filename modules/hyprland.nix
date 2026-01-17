@@ -52,7 +52,7 @@
         };
 
         shadow = {
-          enabled = false;
+          enabled = true;
           range = 10;
           render_power = 2;
           color = "0x33000000";
