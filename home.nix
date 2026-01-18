@@ -26,6 +26,7 @@
       dbeaver-bin
       v2raya
       geeqie
+      termius
     ];
 
     pointerCursor = {
