@@ -832,7 +832,7 @@
       enable = true;
       autoLoad = true;
       settings = {
-        variant = "default";
+        variant = "light";
         borderless_telescope = true;
         hide_fillchars = true;
         italic_comments = true;
