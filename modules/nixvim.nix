@@ -832,17 +832,12 @@
       enable = true;
       autoLoad = true;
       settings = {
-        variant = "light";
+        variant = "default";
         borderless_telescope = true;
         hide_fillchars = true;
         italic_comments = true;
         terminal_colors = true;
         theme = {
-          colors = {
-            bg = "#000000";
-            green = "#00ff00";
-            magenta = "#ff00ff";
-          };
           highlights = {
             Comment = {
               bg = "NONE";

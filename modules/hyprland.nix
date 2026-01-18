@@ -39,12 +39,12 @@
 
       decoration = {
         rounding = 10;
-        active_opacity = 1;
-        inactive_opacity = 1;
+        active_opacity = 0.9;
+        inactive_opacity = 0.8;
         fullscreen_opacity = 1;
 
         blur = {
-          enabled = false;
+          enabled = true;
           size = 3;
           passes = 2;
           new_optimizations = "on";
