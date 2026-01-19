@@ -13,8 +13,6 @@
       ];
 
       "$terminal" = "kitty";
-      "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun";
       "$mainMod" = "SUPER";
 
       env = [
@@ -39,8 +37,8 @@
 
       decoration = {
         rounding = 10;
-        active_opacity = 0.9;
-        inactive_opacity = 0.8;
+        active_opacity = 1;
+        inactive_opacity = 1;
         fullscreen_opacity = 1;
 
         blur = {
