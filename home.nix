@@ -28,6 +28,9 @@
       geeqie
       termius
       unzip
+      (yazi.override {
+        _7zz = _7zz-rar;
+      })
     ];
 
     pointerCursor = {
