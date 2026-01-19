@@ -27,6 +27,7 @@
       v2raya
       geeqie
       termius
+      unzip
     ];
 
     pointerCursor = {
