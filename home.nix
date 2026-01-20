@@ -31,6 +31,7 @@
       (yazi.override {
         _7zz = _7zz-rar;
       })
+      spotifyd
     ];
 
     pointerCursor = {
