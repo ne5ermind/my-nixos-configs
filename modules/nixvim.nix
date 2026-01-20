@@ -676,13 +676,13 @@
       {
         mode = "n";
         key = "[c";
-        action = '':lua require('notebook-navigator').move_cell("u")<CR>'';
+        action = ''<cmd>lua require('notebook-navigator').move_cell("u")<CR>'';
         options.desc = "Prev cell";
       }
       {
         mode = "n";
         key = "]c";
-        action = '':lua require('notebook-navigator').move_cell("d")<CR>'';
+        action = ''<cmd>lua require('notebook-navigator').move_cell("d")<CR>'';
         options.desc = "Next cell";
       }
 
@@ -738,6 +738,12 @@
         key = "<leader>mra";
         action = ":MoltenReevaluateAll<CR>";
         options.desc = "Reevaluate all cells";
+      }
+      {
+        mode = "n";
+        key = "<leader>so";
+        action = ":MoltenEnterOutput<CR>";
+        options.desc = "Enter output window";
       }
 
       # DB control
