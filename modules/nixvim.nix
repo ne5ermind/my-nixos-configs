@@ -150,7 +150,6 @@
           };
           formatters_by_ft = {
             nix = [ "nixfmt" ];
-            python = [ "black" ];
             lua = [ "stylua" ];
           };
         };
