@@ -29,10 +29,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #   mangowc = {
-    #     url = "github:DreamMaoMao/mangowc";
-    #     inputs.nixpkgs.follows = "nixpkgs";
-    #   };
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -40,7 +40,7 @@
       nixpkgs,
       home-manager,
       zapret-discord-youtube,
-      # mangowc,
+      mangowc,
       ...
     }@inputs:
     {
@@ -49,7 +49,7 @@
           ./configuration.nix
           { nixpkgs.config.allowUnfree = true; }
           home-manager.nixosModules.home-manager
-          # mangowc.nixosModules.mango
+          mangowc.nixosModules.mango
           {
             home-manager = {
               useGlobalPkgs = true;
@@ -59,9 +59,9 @@
               extraSpecialArgs = {
                 inherit inputs;
               };
-              #             sharedModules = [
-              #               mangowc.homeManagerModules.mango
-              #             ];
+              sharedModules = [
+                mangowc.homeManagerModules.mango
+              ];
             };
           }
           zapret-discord-youtube.nixosModules.default
