@@ -111,7 +111,7 @@
 
     mango = {
       enable = true;
-      xwayland.enable = true;
+      # xwayland.enable = true;
     };
 
     dms-shell = {
