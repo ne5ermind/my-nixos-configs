@@ -67,6 +67,11 @@
       ];
     };
 
+    xserver.xkb = {
+      layout = "us,ru";
+      options = "caps:escape";
+    };
+
     #   zapret = {
     #     enable = true;
     #     params = [
@@ -106,7 +111,7 @@
 
     mango = {
       enable = true;
-      # xwayland.enable = true;
+      xwayland.enable = true;
     };
 
     dms-shell = {
@@ -141,6 +146,8 @@
     roboto
     nerd-fonts.jetbrains-mono
   ];
+
+  console.useXkbConfig = true;
 
   system.stateVersion = "25.11";
 }
