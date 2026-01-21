@@ -40,8 +40,7 @@
       nixpkgs,
       home-manager,
       zapret-discord-youtube,
-      mangowc,
-      mango,
+      # mangowc,
       ...
     }@inputs:
     {
