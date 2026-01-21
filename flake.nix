@@ -59,6 +59,9 @@
               extraSpecialArgs = {
                 inherit inputs;
               };
+              sharedModules = [
+                mango.homeManagerModules.mango
+              ];
             };
           }
           zapret-discord-youtube.nixosModules.default
