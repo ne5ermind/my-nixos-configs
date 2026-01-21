@@ -4,7 +4,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ./modules/nixvim.nix
-    ./modules/hyprland.nix
+    ./modules/mangowc.nix
   ];
 
   home = {
@@ -44,6 +44,7 @@
     sessionVariables = {
       BROWSER = "zen";
       STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
+      XDG_CACHE_HOME = "/home/never/.cache";
     };
   };
 
@@ -232,12 +233,12 @@
         ff = "fastfetch";
         check = "ollama run qwen2.5:3b";
       };
-      loginExtra = ''
-        if [ "$(tty)" = "/dev/tty1" ]; then
-          exec hyprland
-        fi
-        eval "$(starship init zsh)"
-      '';
+      #     loginExtra = ''
+      #       if [ "$(tty)" = "/dev/tty1" ]; then
+      #         exec hyprland
+      #       fi
+      #       eval "$(starship init zsh)"
+      #     '';
     };
 
     direnv = {

@@ -28,6 +28,11 @@
       url = "github:kartavkun/zapret-discord-youtube";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -35,6 +40,7 @@
       nixpkgs,
       home-manager,
       zapret-discord-youtube,
+      mangowc,
       ...
     }@inputs:
     {
@@ -43,6 +49,7 @@
           ./configuration.nix
           { nixpkgs.config.allowUnfree = true; }
           home-manager.nixosModules.home-manager
+          mangowc.nixosModules.mango
           {
             home-manager = {
               useGlobalPkgs = true;
