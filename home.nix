@@ -423,4 +423,19 @@
       "x-scheme-handler/unknown" = "zen.desktop";
     };
   };
+
+  wayland.windowManager.mango = {
+    enable = true;
+    settings = {
+      bind = [
+        "SUPER,q,spawn,kitty"
+        "SUPER,c,killclient,"
+        "SUPER,R,reload,"
+      ];
+    };
+  };
+
+  keyboard = {
+    options = [ "caps:escape" ];
+  };
 }
