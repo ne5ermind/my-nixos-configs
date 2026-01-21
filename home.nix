@@ -434,8 +434,4 @@
       ];
     };
   };
-
-  keyboard = {
-    options = [ "caps:escape" ];
-  };
 }
