@@ -424,14 +424,4 @@
     };
   };
 
-  wayland.windowManager.mango = {
-    enable = true;
-    settings = {
-      bind = [
-        "SUPER,q,spawn,kitty"
-        "SUPER,c,killclient,"
-        "SUPER,R,reload,"
-      ];
-    };
-  };
 }
