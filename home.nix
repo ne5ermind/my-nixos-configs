@@ -424,7 +424,7 @@
     };
   };
 
-  wayland.windowManager.mangowc = {
+  wayland.windowManager.mango = {
     enable = true;
     settings = {
       bind = [
