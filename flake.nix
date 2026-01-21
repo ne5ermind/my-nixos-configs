@@ -61,7 +61,7 @@
                 inherit inputs;
               };
               sharedModules = [
-                mango.homeManagerModules.mango
+                mangowc.homeManagerModules.mango
               ];
             };
           }
