@@ -112,7 +112,6 @@
     mango = {
       enable = true;
       # xwayland.enable = true;
-      enable = true;
       settings = {
         bind = [
           "SUPER,q,spawn,kitty"
