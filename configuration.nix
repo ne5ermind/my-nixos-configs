@@ -109,18 +109,6 @@
 
     gamemode.enable = true;
 
-    mango = {
-      enable = true;
-      # xwayland.enable = true;
-      settings = {
-        bind = [
-          "SUPER,q,spawn,kitty"
-          "SUPER,c,killclient,"
-          "SUPER,R,reload,"
-        ];
-      };
-    };
-
     dms-shell = {
       enable = true;
       systemd = {
