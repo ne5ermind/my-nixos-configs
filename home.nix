@@ -1,14 +1,13 @@
 {
   pkgs,
   inputs,
-  mangowc,
   ...
 }:
 
 {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
-    mangowc.hmModules.mango
+    inputs.mangowc.hmModules.mango
     ./modules/nixvim.nix
     ./modules/mangowc.nix
   ];
