@@ -29,7 +29,7 @@
             bind=SUPER+SHIFT,l,exchange_client,right
 
             bind=SUPER,1,view,1
-            bind=SUPER,2,view,<D-t>
+            bind=SUPER,2,view,2
             bind=SUPER,3,view,3
             bind=SUPER,4,view,4
             bind=SUPER,5,view,5
@@ -63,7 +63,6 @@
             bind=SUPER+SHIFT,t,setlayout,tile
 
             bind=SUPER+SHIFT,r,reload_config
-            keyboard_options=caps:escape
 
             cursor_size=15
                 # monitors
@@ -77,11 +76,11 @@
             blur=1
             blur_params_radius=3
             blur_params_passes=2
-            animation_type_open=slide
+            animation_type_open=fade
             animation_type_close=slide
 
             # exec-once="dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"
-            exec-once=sleep 2 && dms run
+            exec-once=dms run
             exec-once=kitty zsh -c 'fastfetch; exec zsh'
     '';
   };
