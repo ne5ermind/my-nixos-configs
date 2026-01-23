@@ -96,7 +96,7 @@
     mango.enable = true;
 
     dms-shell = {
-      enable = true;
+      enable = false;
       systemd = {
         enable = false;
       };
