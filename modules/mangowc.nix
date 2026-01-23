@@ -80,7 +80,7 @@
             animation_type_open=slide
             animation_type_close=slide
 
-            #exec-once=sleep 2 && dms run
+            exec-once=dms run
             exec-once=kitty zsh -c 'fastfetch; exec zsh'
     '';
   };
