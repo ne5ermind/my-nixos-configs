@@ -29,7 +29,7 @@
                   bind=SUPER+SHIFT,l,exchange_client,right
 
                   bind=SUPER,1,view,1
-                  bind=SUPER,2,view,2
+                  bind=SUPER,2,view,<D-t>
                   bind=SUPER,3,view,3
                   bind=SUPER,4,view,4
                   bind=SUPER,5,view,5
@@ -63,6 +63,8 @@
       bind=SUPER+SHIFT,t,setlayout,tile
 
       bind=SUPER+SHIFT,r,reload_config
+
+      cursor_size=15
                       # monitors
                   monitorrule=DP-1,0.55,1,scroller,0,1,0,0,2880,1800,120
                   monitorrule=HDMI-A-1,0.50,1,tile,0,1,2880,0,3840,2160,60
