@@ -8,6 +8,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     inputs.mangowc.hmModules.mango
+    inputs.dms.homeModules.dank-material-shell
     ./modules/nixvim.nix
     ./modules/mangowc.nix
   ];
@@ -54,6 +55,8 @@
   };
 
   programs = {
+    dank-material-shell.enable = true;
+
     fastfetch = {
       enable = true;
       settings = {
