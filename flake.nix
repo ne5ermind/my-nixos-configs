@@ -47,6 +47,17 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.never = import ./home.nix;
+              backupFileExtension = "backup";
+              extraSpecialArgs = {
+                inherit inputs;
+              };
+            };
+          }
           mangowc.nixosModules.mango
         ];
       };
