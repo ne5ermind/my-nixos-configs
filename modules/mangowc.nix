@@ -50,14 +50,17 @@
             bind=SUPER+SHIFT,9,tag,9
             bind=SUPER+SHIFT,0,tag,10
 
+            bind=SUPER,y,exec,dms ipc call dankdash wallpaper
+            bind=SUPER,comma,exec,dms ipc call settings focusortoggle
+
             bind=ALT,R,setkeymode,resize
 
             keymode=resize
             bind=NONE,Left,resizewin,-10,0
             bind=NONE,Escape,setkeymode,default
 
-            bind=SUPER,f,togglefloating
-            bind=SUPER+SHIFT,c,centerwin
+            bind=SUPER,f,togglefloating,
+            bind=SUPER+SHIFT,c,centerwin,
 
             bind=SUPER+SHIFT,s,setlayout,scroller
             bind=SUPER+SHIFT,t,setlayout,tile
@@ -78,6 +81,7 @@
             blur_params_passes=2
             animation_type_open=fade
             animation_type_close=slide
+            fadein_begin_opacity=0.1
 
             # exec-once="dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"
             exec-once=dms run
