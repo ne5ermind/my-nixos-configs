@@ -59,6 +59,7 @@
             };
           }
           mangowc.nixosModules.mango
+          mangowc.hmModules.mango
         ];
       };
     };
