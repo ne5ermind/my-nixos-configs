@@ -16,19 +16,18 @@
       #Keys
       bind=SUPER,Return,spawn,kitty
       bind=SUPER+SHIFT,c,killclient,
-      bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
       bind=SUPER+SHIFT,r,reload_config
       bind=SUPER+SHIFT,e,quit,
 
-      bind=SUPER,Left,focusdir,left
-      bind=SUPER,Down,focusdir,down
-      bind=SUPER,Up,focusdir,up
-      bind=SUPER,Right,focusdir,right
+      bind=SUPER,h,focusdir,left
+      bind=SUPER,j,focusdir,down
+      bind=SUPER,k,focusdir,up
+      bind=SUPER,l,focusdir,right
 
-      bind=SUPER+SHIFT,Left,exchange_client,left
-      bind=SUPER+SHIFT,Down,exchange_client,down
-      bind=SUPER+SHIFT,Up,exchange_client,up
-      bind=SUPER+SHIFT,Right,exchange_client,right
+      bind=SUPER+SHIFT,h,exchange_client,left
+      bind=SUPER+SHIFT,j,exchange_client,down
+      bind=SUPER+SHIFT,k,exchange_client,up
+      bind=SUPER+SHIFT,l,exchange_client,right
 
       bind=SUPER,1,view,1
       bind=SUPER,2,view,2
@@ -55,8 +54,7 @@
       monitorrule=DP-1,0.55,1,tile,0,1,0,0,2880,1800,120
       monitorrule=HDMI-A-1,0.50,1,scroller,0,1,2880,0,3840,2160,60
 
-      exec-once=dms run
     '';
-    # monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
+    # exec-once=dms run
   };
 }
