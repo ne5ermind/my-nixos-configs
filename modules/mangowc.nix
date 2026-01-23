@@ -52,6 +52,9 @@
       bind=SUPER+SHIFT,9,tag,9
       bind=SUPER+SHIFT,0,tag,10
 
+      monitorrule=DP-1,0.55,1,tile,0,1,0,0,2880,1800,120
+      monitorrule=HDMI-A-1,0.50,1,scroller,0,1,2880,0,3840,2160,60
+
       exec-once=dms run
     '';
     # monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60

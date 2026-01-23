@@ -4,7 +4,10 @@
   imports = [
     ./hardware-configuration.nix
     # ./modules/hardware/additional-config.nix
+    ./modules/mangowc.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -71,23 +74,6 @@
       layout = "us,ru";
       options = "caps:escape";
     };
-
-    #   zapret = {
-    #     enable = true;
-    #     params = [
-    #       "--dpi-desync=fake,disorder2"
-    #       "--dpi-desync-ttl=1"
-    #       "--dpi-desync-autottl=2"
-    #     ];
-    #     whitelist = [
-    #       "youtube.com"
-    #       "googlevideo.com"
-    #       "ytimg.com"
-    #       "youtu.be"
-    #       "discord-attachmets-uploads-prd.storage.googleapis.com"
-    #       "googleapis.com"
-    #     ];
-    #   };
   };
 
   networking = {
@@ -141,6 +127,16 @@
     roboto
     nerd-fonts.jetbrains-mono
   ];
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.never = import ./home.nix;
+    backupFileExtension = "backup";
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+  };
 
   console.useXkbConfig = true;
 
