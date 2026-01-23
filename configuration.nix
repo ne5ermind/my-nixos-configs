@@ -105,12 +105,12 @@
 
     mango.enable = true;
 
-#   dms-shell = {
-#     enable = true;
-#     systemd = {
-#       enable = true;
-#     };
-    };
+    #   dms-shell = {
+    #     enable = true;
+    #     systemd = {
+    #       enable = true;
+    #     };
+    #   };
 
     zsh = {
       enable = true;
