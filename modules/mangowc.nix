@@ -50,8 +50,18 @@
             bind=SUPER+SHIFT,9,tag,9
             bind=SUPER+SHIFT,0,tag,10
 
-            monitorrule=DP-1,0.55,1,tile,0,1,0,0,2880,1800,120
-            monitorrule=HDMI-A-1,0.50,1,scroller,0,1,2880,0,3840,2160,60
+            monitorrule=DP-1,0.55,1,scroller,0,1,0,0,2880,1800,120
+            monitorrule=HDMI-A-1,0.50,1,tile,0,1,2880,0,3840,2160,60
+
+            # theming
+            bordercolor=0x44444444
+            focuscolor=0x66666666
+            borderpx=1
+            blur=1
+            blur_params_radius=3
+            blur_params_passes=2
+            animation_type_open=zoom
+            animation_type_close=slide
 
     '';
     # exec-once=dms run
