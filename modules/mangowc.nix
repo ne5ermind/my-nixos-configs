@@ -79,8 +79,8 @@
                     animation_type_open=slide
                     animation_type_close=slide
 
+      exec-once=kitty zsh -c 'fastfetch; exec zsh'
       exec-once=dms run
-      kitty zsh -c 'fastfetch; exec zsh'
     '';
   };
 }
