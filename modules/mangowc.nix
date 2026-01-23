@@ -52,6 +52,7 @@
 
             bind=SUPER,y,exec,dms ipc call dankdash wallpaper
             bind=SUPER,comma,exec,dms ipc call settings focusortoggle
+            bind=SUPER,space,exec,dms ipc call spotlight toggle
 
             bind=ALT,R,setkeymode,resize
 
