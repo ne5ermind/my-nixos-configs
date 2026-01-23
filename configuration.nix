@@ -65,6 +65,8 @@
 
     blueman.enable = true;
 
+    upower.enable = true;
+
     v2raya = {
       enable = true;
       cliPackage = pkgs.xray;
@@ -137,6 +139,8 @@
     roboto
     nerd-fonts.jetbrains-mono
   ];
+
+  security.polkit.enable = true;
 
   console.useXkbConfig = true;
 

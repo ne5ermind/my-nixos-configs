@@ -80,6 +80,7 @@
             animation_type_open=slide
             animation_type_close=slide
 
+            exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
             exec-once=dms run
             exec-once=kitty zsh -c 'fastfetch; exec zsh'
     '';
