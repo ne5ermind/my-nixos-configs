@@ -71,7 +71,7 @@
 
             # theming
             bordercolor=0x44444444
-            focuscolor=0x66666666
+            focuscolor=0x99999999
             borderpx=1
             blur=1
             blur_params_radius=3
