@@ -128,16 +128,6 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.never = import ./home.nix;
-    backupFileExtension = "backup";
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-  };
-
   console.useXkbConfig = true;
 
   system.stateVersion = "25.11";
