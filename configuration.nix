@@ -91,7 +91,7 @@
   };
 
   programs = {
-    # firefox.enable = true;
+    dconf.enable = true;
 
     mango.enable = true;
 
