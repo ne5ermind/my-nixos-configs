@@ -108,7 +108,7 @@
     dms-shell = {
       enable = true;
       systemd = {
-        enable = false;
+        enable = true;
       };
     };
 
