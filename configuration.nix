@@ -14,9 +14,15 @@
   boot.kernelModules = [ "xt_TPROXY" ];
   time.timeZone = "Europe/Moscow";
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    bluetooth = {
+      enable = true;
+    };
   };
 
   nix = {
@@ -56,6 +62,8 @@
 
   services = {
     getty.autologinUser = "never";
+
+    blueman.enable = true;
 
     v2raya = {
       enable = true;
@@ -116,6 +124,8 @@
     extraGroups = [
       "wheel"
       "docker"
+      "video"
+      "input"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [
