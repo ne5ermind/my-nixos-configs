@@ -81,7 +81,7 @@
             animation_type_close=slide
 
             exec-once="dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"
-            # exec-once=sleep 2 && dms run
+            exec-once=sleep 2 && dms run
             exec-once=kitty zsh -c 'fastfetch; exec zsh'
     '';
   };
