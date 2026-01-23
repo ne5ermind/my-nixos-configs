@@ -4,7 +4,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ./modules/nixvim.nix
-    # ./modules/mangowc.nix
+    ./modules/mangowc.nix
   ];
 
   home = {

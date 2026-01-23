@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     # ./modules/hardware/additional-config.nix
-    ./modules/mangowc.nix
+    # ./modules/mangowc.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -93,7 +93,7 @@
   programs = {
     # firefox.enable = true;
 
-    gamemode.enable = true;
+    mango.enable = true;
 
     dms-shell = {
       enable = true;
