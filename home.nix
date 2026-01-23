@@ -1,4 +1,9 @@
-{ pkgs, inputs, mangowc ... }:
+{
+  pkgs,
+  inputs,
+  mangowc,
+  ...
+}:
 
 {
   imports = [
