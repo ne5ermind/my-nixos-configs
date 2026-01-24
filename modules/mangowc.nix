@@ -81,6 +81,7 @@
       bordercolor=0x44444444
       focuscolor=0x99999999
       borderpx=1
+      border_radius=7
       blur=1
       blur_params_radius=3
       blur_params_passes=2
