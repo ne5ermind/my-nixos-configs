@@ -54,7 +54,7 @@
             bind=SUPER,comma,spawn,dms ipc call settings focusortoggle
             bind=SUPER,space,spawn,dms ipc call spotlight toggle
 
-            bind=ALT,R,setkeymode,resize
+            bind=ALT,r,setkeymode,resize
 
             keymode=resize
             bind=NONE,h,resizewin,-10,0
@@ -66,10 +66,12 @@
             bind=SUPER,f,togglefloating,
             bind=SUPER+SHIFT,c,centerwin,
 
-            bind=SUPER+SHIFT,s,setlayout,scroller
-            bind=SUPER+SHIFT,t,setlayout,tile
+            bind=SUPER+SHIFT,s,switchlayout,
 
             bind=SUPER+SHIFT,r,reload_config
+
+            bind=SUPER,m,incnmaster,+1
+            bind=SUPER,n,incnmaster,-1
 
             cursor_size=15
                 # monitors
