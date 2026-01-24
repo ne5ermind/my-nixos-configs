@@ -2,94 +2,113 @@
   wayland.windowManager.mango = {
     enable = true;
     settings = ''
-            #Layout
-            # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
-      #     tagrule=id:1,layout_name:tile
-      #     tagrule=id:2,layout_name:tile
-      #     tagrule=id:3,layout_name:tile
-      #     tagrule=id:4,layout_name:tile
-      #     tagrule=id:5,layout_name:tile
-      #     tagrule=id:6,layout_name:tile
-      #     tagrule=id:7,layout_name:tile
-      #     tagrule=id:8,layout_name:vertical_scroller
-      #     tagrule=id:9,layout_name:scroller
-            #Keys
-            bind=SUPER,q,spawn,kitty
-            bind=SUPER,c,killclient,
-            bind=SUPER,z,spawn,zen
+      #Layout
+      # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
+      #Keys
+      bind=SUPER,q,spawn,kitty
+      bind=SUPER,c,killclient,
+      bind=SUPER,z,spawn,zen
 
-            bind=SUPER,h,focusdir,left
-            bind=SUPER,j,focusdir,down
-            bind=SUPER,k,focusdir,up
-            bind=SUPER,l,focusdir,right
+      bind=SUPER,h,focusdir,left
+      bind=SUPER,j,focusdir,down
+      bind=SUPER,k,focusdir,up
+      bind=SUPER,l,focusdir,right
 
-            bind=SUPER+SHIFT,h,exchange_client,left
-            bind=SUPER+SHIFT,j,exchange_client,down
-            bind=SUPER+SHIFT,k,exchange_client,up
-            bind=SUPER+SHIFT,l,exchange_client,right
+      bind=SUPER+SHIFT,h,exchange_client,left
+      bind=SUPER+SHIFT,j,exchange_client,down
+      bind=SUPER+SHIFT,k,exchange_client,up
+      bind=SUPER+SHIFT,l,exchange_client,right
 
-            bind=SUPER,1,view,1
-            bind=SUPER,2,view,2
-            bind=SUPER,3,view,3
-            bind=SUPER,4,view,4
-            bind=SUPER,5,view,5
-            bind=SUPER,6,view,6
-            bind=SUPER,7,view,7
-            bind=SUPER,8,view,8
-            bind=SUPER,9,view,9
-            bind=SUPER,0,view,10
+      bind=SUPER,1,view,1
+      bind=SUPER,2,view,2
+      bind=SUPER,3,view,3
+      bind=SUPER,4,view,4
+      bind=SUPER,5,view,5
+      bind=SUPER,6,view,6
+      bind=SUPER,7,view,7
+      bind=SUPER,8,view,8
+      bind=SUPER,9,view,9
+      bind=SUPER,0,view,10
 
-            bind=SUPER+SHIFT,1,tag,1
-            bind=SUPER+SHIFT,2,tag,2
-            bind=SUPER+SHIFT,3,tag,3
-            bind=SUPER+SHIFT,4,tag,4
-            bind=SUPER+SHIFT,5,tag,5
-            bind=SUPER+SHIFT,6,tag,6
-            bind=SUPER+SHIFT,7,tag,7
-            bind=SUPER+SHIFT,8,tag,8
-            bind=SUPER+SHIFT,9,tag,9
-            bind=SUPER+SHIFT,0,tag,10
+      bind=SUPER+SHIFT,1,tag,1
+      bind=SUPER+SHIFT,2,tag,2
+      bind=SUPER+SHIFT,3,tag,3
+      bind=SUPER+SHIFT,4,tag,4
+      bind=SUPER+SHIFT,5,tag,5
+      bind=SUPER+SHIFT,6,tag,6
+      bind=SUPER+SHIFT,7,tag,7
+      bind=SUPER+SHIFT,8,tag,8
+      bind=SUPER+SHIFT,9,tag,9
+      bind=SUPER+SHIFT,0,tag,10
 
-            bind=SUPER,y,spawn,dms ipc call dankdash wallpaper
-            bind=SUPER,comma,spawn,dms ipc call settings focusortoggle
-            bind=SUPER,space,spawn,dms ipc call spotlight toggle
+      bind=SUPER,y,spawn,dms ipc call dankdash wallpaper
+      bind=SUPER,comma,spawn,dms ipc call settings focusortoggle
+      bind=SUPER,space,spawn,dms ipc call spotlight toggle
 
-            bind=ALT,r,setkeymode,resize
+      bind=ALT,r,setkeymode,resize
 
-            keymode=resize
-            bind=NONE,h,resizewin,-10,0
-            bind=NONE,l,resizewin,10,0
-            bind=NONE,k,resizewin,0,10
-            bind=NONE,j,resizewin,0,-10
-            bind=NONE,Escape,setkeymode,default
+      keymode=resize
+      bind=NONE,h,resizewin,-10,0
+      bind=NONE,l,resizewin,10,0
+      bind=NONE,k,resizewin,0,10
+      bind=NONE,j,resizewin,0,-10
+      bind=NONE,Escape,setkeymode,default
 
-            bind=SUPER,f,togglefloating,
-            bind=SUPER+SHIFT,c,centerwin,
+      bind=SUPER,f,togglefullscreen,
+      bind=SUPER+SHIFT,f,togglefloating,
+      bind=SUPER+SHIFT,c,centerwin,
 
-            bind=SUPER+SHIFT,s,switchlayout,
+      bind=SUPER,t,setlayout,tile
+      bind=SUPER,v,setlayout,vertical_grid
+      bind=SUPER,c,setlayout,spiral
+      bind=SUPER,x,setlayout,scroller
+      bind=SUPER,n,switch_layout
+      bind=SUPER,g,togglegaps
+      bind=SUPER,s,toggleoverview
 
-            bind=SUPER+SHIFT,r,reload_config
 
-            bind=SUPER,m,incnmaster,+1
-            bind=SUPER,n,incnmaster,-1
+      bind=SUPER+SHIFT,r,reload_config
 
-            cursor_size=15
-                # monitors
-            monitorrule=DP-1,0.55,1,scroller,0,1,0,0,2880,1800,120
-            monitorrule=HDMI-A-1,0.50,1,tile,0,1,2880,0,3840,2160,60
+      bind=SUPER,m,incnmaster,+1
+      bind=SUPER,n,incnmaster,-1
 
-            # theming
-            bordercolor=0x44444444
-            focuscolor=0x99999999
-            borderpx=1
-            blur=1
-            blur_params_radius=3
-            blur_params_passes=2
-            animation_type_open=slide
-            animation_type_close=slide
+      cursor_size=15
+      # monitors
+      monitorrule=DP-1,0.55,1,scroller,0,1,0,0,2880,1800,120
+      monitorrule=HDMI-A-1,0.50,1,tile,0,1,2880,0,3840,2160,60
 
-            exec-once=dms run
-            exec-once=kitty zsh -c 'fastfetch; exec zsh'
+      # theming
+      bordercolor=0x44444444
+      focuscolor=0x99999999
+      borderpx=1
+      blur=1
+      blur_params_radius=3
+      blur_params_passes=2
+
+      animations=1
+      layer_animations=1
+      animation_type_open=zoom
+      animation_type_close=slide 
+      layer_animation_type_open=slide
+      layer_animation_type_close=slide 
+      animation_fade_in=1
+      animation_fade_out=1
+      tag_animation_direction=1
+      zoom_initial_ratio=0.3
+      zoom_end_ratio=0.7
+      fadein_begin_opacity=0.6
+      fadeout_begin_opacity=0.8
+      animation_duration_move=500
+      animation_duration_open=400
+      animation_duration_tag=350
+      animation_duration_close=800
+      animation_curve_open=0.46,1.0,0.29,1.1
+      animation_curve_move=0.46,1.0,0.29,1
+      animation_curve_tag=0.46,1.0,0.29,1
+      animation_curve_close=0.08,0.92,0,1
+
+      exec-once=dms run
+      exec-once=kitty zsh -c 'fastfetch; exec zsh'
     '';
   };
 }
