@@ -19,16 +19,16 @@
       bind=SUPER+SHIFT,k,exchange_client,up
       bind=SUPER+SHIFT,l,exchange_client,right
 
-      bind=SUPER,1,view,1
-      bind=SUPER,2,view,2
-      bind=SUPER,3,view,3
-      bind=SUPER,4,view,4
-      bind=SUPER,5,view,5
-      bind=SUPER,6,view,6
-      bind=SUPER,7,view,7
-      bind=SUPER,8,view,8
-      bind=SUPER,9,view,9
-      bind=SUPER,0,view,10
+      bind=SUPER,1,comboview,1
+      bind=SUPER,2,comboview,2
+      bind=SUPER,3,comboview,3
+      bind=SUPER,4,comboview,4
+      bind=SUPER,5,comboview,5
+      bind=SUPER,6,comboview,6
+      bind=SUPER,7,comboview,7
+      bind=SUPER,8,comboview,8
+      bind=SUPER,9,comboview,9
+      bind=SUPER,0,comboview,10
 
       bind=SUPER+SHIFT,1,tag,1
       bind=SUPER+SHIFT,2,tag,2
@@ -45,14 +45,6 @@
       bind=SUPER,comma,spawn,dms ipc call settings focusortoggle
       bind=SUPER,space,spawn,dms ipc call spotlight toggle
 
-      bind=ALT,r,setkeymode,resize
-
-      keymode=resize
-      bind=NONE,h,resizewin,-10,0
-      bind=NONE,l,resizewin,10,0
-      bind=NONE,k,resizewin,0,10
-      bind=NONE,j,resizewin,0,-10
-      bind=NONE,Escape,setkeymode,default
 
       bind=SUPER,f,togglefullscreen,
       bind=SUPER+SHIFT,f,togglefloating,
@@ -107,6 +99,15 @@
       animation_curve_move=0.46,1.0,0.29,1
       animation_curve_tag=0.46,1.0,0.29,1
       animation_curve_close=0.08,0.92,0,1
+
+      bind=ALT,r,setkeymode,resize
+
+      keymode=resize
+      bind=NONE,h,resizewin,-10,0
+      bind=NONE,l,resizewin,10,0
+      bind=NONE,k,resizewin,0,10
+      bind=NONE,j,resizewin,0,-10
+      bind=NONE,Escape,setkeymode,default
 
       exec-once=dms run
       exec-once=kitty zsh -c 'fastfetch; exec zsh'
