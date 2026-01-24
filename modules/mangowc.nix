@@ -57,7 +57,10 @@
             bind=ALT,R,setkeymode,resize
 
             keymode=resize
-            bind=NONE,Left,resizewin,-10,0
+            bind=NONE,h,resizewin,-10,0
+            bind=NONE,l,resizewin,10,0
+            bind=NONE,k,resizewin,0,10
+            bind=NONE,j,resizewin,0,-10
             bind=NONE,Escape,setkeymode,default
 
             bind=SUPER,f,togglefloating,
