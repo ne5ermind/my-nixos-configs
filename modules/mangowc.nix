@@ -50,9 +50,9 @@
             bind=SUPER+SHIFT,9,tag,9
             bind=SUPER+SHIFT,0,tag,10
 
-            bind=SUPER,y,spawn,"dms ipc call dankdash wallpaper"
-            bind=SUPER,comma,spawn,"dms ipc call settings focusortoggle"
-            bind=SUPER,space,spawn,"dms ipc call spotlight toggle"
+            bind=SUPER,y,spawn,dms ipc call dankdash wallpaper
+            bind=SUPER,comma,spawn,dms ipc call settings focusortoggle
+            bind=SUPER,space,spawn,dms ipc call spotlight toggle
 
             bind=ALT,R,setkeymode,resize
 
@@ -80,11 +80,9 @@
             blur=1
             blur_params_radius=3
             blur_params_passes=2
-            animation_type_open=fade
+            animation_type_open=slide
             animation_type_close=slide
-            fadein_begin_opacity=0.1
 
-            # exec-once="dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"
             exec-once=dms run
             exec-once=kitty zsh -c 'fastfetch; exec zsh'
     '';
