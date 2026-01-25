@@ -218,7 +218,6 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "spicetify-nix": "spicetify-nix",
-        "tgt": "tgt",
         "zapret-discord-youtube": "zapret-discord-youtube",
         "zen-browser": "zen-browser"
       }
@@ -307,26 +306,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "tgt": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1768924651,
-        "narHash": "sha256-dBw2Z0IzAPZ23U+8TSEHQIe/d/ao7cZFibabn2vN5dI=",
-        "owner": "FedericoBruzzone",
-        "repo": "tgt",
-        "rev": "6adc8947b26fb565ad0a5ba9339cbe460ddf1ce1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "FedericoBruzzone",
-        "repo": "tgt",
         "type": "github"
       }
     },

@@ -55,7 +55,6 @@
       v2ray-domain-list-community
       grim
       # zapret
-      spotify-player
     ];
 
     variables = {
