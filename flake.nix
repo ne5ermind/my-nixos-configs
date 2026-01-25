@@ -50,6 +50,7 @@
       nixpkgs,
       home-manager,
       mangowc,
+      spotatui,
       dms,
       ...
     }@inputs:
