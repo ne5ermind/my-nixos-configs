@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  tgt,
   ...
 }:
 
@@ -56,7 +55,7 @@
       v2ray-domain-list-community
       grim
       # zapret
-      tgt.packages.${pkgs.system}.default
+      inputs.tgt.packages.${pkgs.system}.default
     ];
 
     variables = {
