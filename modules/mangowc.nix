@@ -52,7 +52,7 @@
 
       bind=SUPER,t,setlayout,tile
       bind=SUPER,v,setlayout,vertical_grid
-      bind=SUPER,c,setlayout,spiral
+      bind=SUPER,h,setlayout,spiral
       bind=SUPER,x,setlayout,scroller
       bind=SUPER,n,switch_layout
       bind=SUPER,g,togglegaps
@@ -61,8 +61,8 @@
 
       bind=SUPER+SHIFT,r,reload_config
 
-      bind=SUPER,m,incnmaster,+1
-      bind=SUPER,n,incnmaster,-1
+      bind=SUPER+SHIFT,m,incnmaster,+1
+      bind=SUPER+SHIFT,n,incnmaster,-1
 
       cursor_size=15
       # monitors
