@@ -99,6 +99,16 @@
       animation_curve_move=0.46,1.0,0.29,1
       animation_curve_tag=0.46,1.0,0.29,1
       animation_curve_close=0.08,0.92,0,1
+      no_border_when_single=1
+
+      # Scroller Layout Setting
+      scroller_structs=20
+      scroller_default_proportion=0.8
+      scroller_focus_center=0
+      scroller_prefer_center=1
+      edge_scroller_pointer_focus=1
+      scroller_default_proportion_single=1.0
+      scroller_proportion_preset=0.5,0.8,1.0
 
       bind=ALT,r,setkeymode,resize
 
