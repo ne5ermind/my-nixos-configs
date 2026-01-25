@@ -55,6 +55,9 @@
       v2ray-domain-list-community
       grim
       # zapret
+    ];
+
+    systemPackages = [
       inputs.tgt.packages.${pkgs.system}.default
     ];
 
