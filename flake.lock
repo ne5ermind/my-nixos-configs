@@ -218,6 +218,7 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "spicetify-nix": "spicetify-nix",
+        "spotatui": "spotatui",
         "zapret-discord-youtube": "zapret-discord-youtube",
         "zen-browser": "zen-browser"
       }
@@ -261,6 +262,22 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
+        "type": "github"
+      }
+    },
+    "spotatui": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769280624,
+        "narHash": "sha256-olQFcJcexJ87Wn+4sc/QM9zfnQSuNQGLNbY8Pv8ZBeY=",
+        "owner": "LargeModGames",
+        "repo": "spotatui",
+        "rev": "3ea11909057171516996afd57ca40f595d10d5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LargeModGames",
+        "repo": "spotatui",
         "type": "github"
       }
     },

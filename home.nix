@@ -37,7 +37,7 @@
       (yazi.override {
         _7zz = _7zz-rar;
       })
-      (pkgs.callPackage inputs.spotatui-src { })
+      (pkgs.callPackage inputs.spotatui { })
     ];
 
     pointerCursor = {
