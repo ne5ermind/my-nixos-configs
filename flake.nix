@@ -38,6 +38,11 @@
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tgt = {
+      url = "github:FedericoBruzzone/tgt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -45,6 +50,7 @@
       nixpkgs,
       home-manager,
       mangowc,
+      tgt,
       dms,
       ...
     }@inputs:
