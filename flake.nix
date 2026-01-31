@@ -65,7 +65,6 @@
               useUserPackages = true;
               users.never = import ./home.nix;
               backupFileExtension = "backup";
-              backupFileExtension = "hm-backup";
               extraSpecialArgs = {
                 inherit inputs;
               };
