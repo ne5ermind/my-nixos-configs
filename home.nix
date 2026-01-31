@@ -10,7 +10,7 @@
     inputs.mangowc.hmModules.mango
     inputs.dms.homeModules.dank-material-shell
     ./modules/nixvim.nix
-    ./modules/mangowc.nix
+    ./modules/hyprland.nix
   ];
 
   home = {
@@ -407,7 +407,6 @@
     settings = {
       General = {
         useGrimAdapter = true;
-        # Stops warnings for using Grim
         disabledGrimWarning = true;
       };
     };
