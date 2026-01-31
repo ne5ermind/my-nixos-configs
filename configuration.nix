@@ -55,7 +55,7 @@
       v2ray-domain-list-community
       grim
       papirus-icon-theme
-      qt6ct
+      qt6cqt6Packages.qt6ct
       # zapret
     ];
 
