@@ -54,6 +54,7 @@
       v2ray-geoip
       v2ray-domain-list-community
       grim
+      papirus-icon-theme
       # zapret
     ];
 
