@@ -55,7 +55,7 @@
       v2ray-domain-list-community
       grim
       papirus-icon-theme
-      qt6cqt6Packages.qt6ct
+      kdePackages.qt6ct
       # zapret
     ];
 
@@ -63,6 +63,11 @@
       EDITOR = "nvim";
       VISUAL = "nvim";
       SUDO_EDITOR = "nvim";
+    };
+
+    sessionVariables = {
+      QT_QPA_PLATFORMTHEME = "qt6ct";
+      GDK_PIXBUF_MODULE_FILE = "$(echo ${pkgs.librsvg.out}/lib/gdk-pixbuf-2.0/*/loaders.cache)";
     };
   };
 
