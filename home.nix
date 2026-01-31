@@ -431,4 +431,9 @@
       "x-scheme-handler/unknown" = "zen.desktop";
     };
   };
+
+  gtk.iconTheme = {
+    name = "Reversal-black";
+    package = pkgs.reversal-icon-theme;
+  };
 }
