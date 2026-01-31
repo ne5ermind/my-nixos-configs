@@ -244,7 +244,7 @@
       };
       loginExtra = ''
         if [ "$(tty)" = "/dev/tty1" ]; then
-          exec mango
+          exec hyprland
         fi
         eval "$(starship init zsh)"
       '';
