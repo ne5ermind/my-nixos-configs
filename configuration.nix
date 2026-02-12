@@ -26,6 +26,14 @@
         efiSupport = true;
         useOSProber = true;
         # theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
+
+        extraEntries = ''
+          menuentry "Bazzite (via Chainload)" --class bazzite --class fedora {
+          insmod part_gpt
+          insmod fat
+          search --no-floppy --fs-uuid --set=root --file /EFI/fedora/grubx64.efi
+          chainloader /EFI/fedora/grubx64.efi
+        '';
       };
     };
   };
