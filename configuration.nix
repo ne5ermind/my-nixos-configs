@@ -25,6 +25,7 @@
         device = "nodev";
         efiSupport = true;
         useOSProber = true;
+        efiInstallAsRemovable = true;
         # theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
 
         extraEntries = ''
