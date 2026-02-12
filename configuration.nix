@@ -25,7 +25,7 @@
         device = "nodev";
         efiSupport = true;
         useOSProber = true;
-        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
+        # theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
     };
   };
