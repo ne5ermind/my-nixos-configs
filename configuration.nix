@@ -17,7 +17,7 @@
     kernelModules = [ "xt_TPROXY" ];
 
     loader = {
-      efi.canTouchEfiVariables = true;
+      efi.canTouchEfiVariables = false;
       # systemd-boot.enable = true;
 
       grub = {
