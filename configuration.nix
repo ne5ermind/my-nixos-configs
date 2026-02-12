@@ -17,25 +17,25 @@
     kernelModules = [ "xt_TPROXY" ];
 
     loader = {
-      efi.canTouchEfiVariables = false;
-      # systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      systemd-boot.enable = true;
 
-      grub = {
-        enable = true;
-        device = "nodev";
-        efiSupport = true;
-        useOSProber = true;
-        efiInstallAsRemovable = true;
-        theme = null;
+      #     grub = {
+      #       enable = true;
+      #       device = "nodev";
+      #       efiSupport = true;
+      #       useOSProber = true;
+      #       efiInstallAsRemovable = true;
+      #       theme = null;
 
-        extraEntries = ''
-          menuentry "Bazzite (via Chainload)" --class bazzite --class fedora {
-          insmod part_gpt
-          insmod fat
-          search --no-floppy --fs-uuid --set=root --file /EFI/fedora/shimx64.efi
-          chainloader /EFI/fedora/shimx64.efi
-        '';
-      };
+      #       extraEntries = ''
+      #         menuentry "Bazzite (via Chainload)" --class bazzite --class fedora {
+      #         insmod part_gpt
+      #         insmod fat
+      #         search --no-floppy --fs-uuid --set=root --file /EFI/fedora/shimx64.efi
+      #         chainloader /EFI/fedora/shimx64.efi
+      #       '';
+      #     };
     };
   };
 
