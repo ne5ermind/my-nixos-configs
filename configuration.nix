@@ -26,7 +26,7 @@
         efiSupport = true;
         useOSProber = true;
         theme = pkgs.distro-grub-themes.override {
-          theme = "nixos";
+          themeVariants = [ "nixos" ];
         };
       };
     };
