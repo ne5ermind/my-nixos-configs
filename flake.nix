@@ -43,6 +43,11 @@
       url = "github:LargeModGames/spotatui";
       flake = false;
     };
+
+    nixos-grub-themes = {
+      url = "github:jeslie0/nixos-grub-themes";'
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

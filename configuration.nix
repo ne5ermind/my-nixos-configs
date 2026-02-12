@@ -25,9 +25,7 @@
         device = "nodev";
         efiSupport = true;
         useOSProber = true;
-        theme = pkgs.distro-grub-themes.override {
-          themeVariants = [ "nixos" ];
-        };
+        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
     };
   };
