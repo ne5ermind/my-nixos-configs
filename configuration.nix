@@ -26,7 +26,7 @@
         efiSupport = true;
         useOSProber = true;
         efiInstallAsRemovable = true;
-        # theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
+        theme = null;
 
         extraEntries = ''
           menuentry "Bazzite (via Chainload)" --class bazzite --class fedora {
