@@ -69,7 +69,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.never = import ./home.nix;
-              backupFileExtension = "backup";
+              backupFileExtension = "hm-bak";
               extraSpecialArgs = {
                 inherit inputs;
               };
