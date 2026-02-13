@@ -7,8 +7,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    # ./modules/hardware/additional-config.nix
-    # ./modules/mangowc.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -122,13 +120,6 @@
     dconf.enable = true;
 
     mango.enable = true;
-
-    #   dms-shell = {
-    #     enable = true;
-    #     systemd = {
-    #       enable = true;
-    #     };
-    #   };
 
     hyprland = {
       enable = true;

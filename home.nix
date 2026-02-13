@@ -315,8 +315,8 @@
         active_tab_title_template "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title[:30]}{title[30:] and '…'} [{index}]"
 
         foreground                      #d5d5d5
-        background                      #121212
-        selection_foreground            #121212
+        background                      #010101
+        selection_foreground            #010101
         selection_background            #b0b0b0
 
 
