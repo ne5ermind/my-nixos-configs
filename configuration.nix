@@ -19,23 +19,6 @@
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot.enable = true;
-
-      #     grub = {
-      #       enable = true;
-      #       device = "nodev";
-      #       efiSupport = true;
-      #       useOSProber = true;
-      #       efiInstallAsRemovable = true;
-      #       theme = null;
-
-      #       extraEntries = ''
-      #         menuentry "Bazzite (via Chainload)" --class bazzite --class fedora {
-      #         insmod part_gpt
-      #         insmod fat
-      #         search --no-floppy --fs-uuid --set=root --file /EFI/fedora/shimx64.efi
-      #         chainloader /EFI/fedora/shimx64.efi
-      #       '';
-      #     };
     };
   };
 
@@ -79,6 +62,7 @@
       grim
       papirus-icon-theme
       kdePackages.qt6ct
+      zfxtop
       # zapret
     ];
 
