@@ -118,8 +118,8 @@
         bar_height = 30;
         bar_color = "rgba(1a1a1aaa)";
         hyprbars-button = [
-          "hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive"
-          "hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1"
+          "rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive"
+          "rgb(eeee11), 10, , hyprctl dispatch fullscreen 1"
         ];
       };
 
