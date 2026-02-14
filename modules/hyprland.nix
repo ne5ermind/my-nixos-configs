@@ -115,11 +115,11 @@
       };
 
       "plugin:hyprbars" = {
-        bar_height = 20;
+        bar_height = 30;
         bar_color = "rgba(1a1a1aaa)";
         hyprbars-button = [
-          "rgb(ff4040), 12,   , hyprctl dispatch killactive"
-          "rgb(eeee11), 12, , hyprctl dispatch fullscreen 1"
+          "hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive"
+          "hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1"
         ];
       };
 
