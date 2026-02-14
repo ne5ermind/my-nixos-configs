@@ -7,7 +7,6 @@
 {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
-    inputs.mangowc.hmModules.mango
     inputs.dms.homeModules.dank-material-shell
     ./modules/nixvim.nix
     ./modules/hyprland.nix

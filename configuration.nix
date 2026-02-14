@@ -119,8 +119,6 @@
   programs = {
     dconf.enable = true;
 
-    mango.enable = true;
-
     hyprland = {
       enable = true;
       xwayland.enable = true;
