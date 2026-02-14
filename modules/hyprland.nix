@@ -220,14 +220,17 @@
     extraConfig = ''
       plugin {
         hyprbars {
-          bar_height = 30
-          bar_color = rgb(1a1a1aaa)
+          bar_height = 20
+          bar_color = rgba(1a1a1aaa)
 
-          hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
-          hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
+          hyprbars-button = rgb(ff4040), 20, 󰖭, hyprctl dispatch killactive
+          hyprbars-button = rgb(eeee11), 20, , hyprctl dispatch fullscreen 1
 
           bar_title_enabled = false
           bar_part_of_window = true
+          bar_precedence_over_border = true
+          bar_buttons_alignment = left
+          bar_button_padding = 10
         }
       }
     '';
