@@ -163,7 +163,7 @@
           #         truncation_length = 3;
           #         truncation_symbol = "…/";
           repo_root_style = "bold bright-blue";
-          format = "[$path]($style)[$read_only]($read_only_style) ";
+          format = "[$path]($style)[$read_only] ";
         };
 
         character = {
