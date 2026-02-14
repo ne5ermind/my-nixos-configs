@@ -5,6 +5,7 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = false;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
     settings = {
       monitor = [
