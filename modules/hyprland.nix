@@ -195,12 +195,6 @@
       ];
 
       windowrule = [
-        "float,class:^(KittyRunner)$"
-        "noborder, class:^(org\\.wezfurlong\\.wezterm)$"
-        "noborder, class:^(Alacritty)$"
-        "noborder, class:^(zen)$"
-        "noborder, class:^(com\\.mitchellh\\.ghostty)$"
-        "noborder, class:^(kitty)$"
         "float, class:^(firefox)$, title:^(Picture-in-Picture)$"
         "float, class:^(zoom)$"
         "float, class:^(org.quickshell)$"
