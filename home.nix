@@ -27,7 +27,7 @@
       neo
       cava
       inputs.zen-browser.packages."${pkgs.system}".default
-      wpsoffice-cn
+      # wpsoffice-cn
       dbeaver-bin
       v2raya
       geeqie
