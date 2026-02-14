@@ -203,5 +203,13 @@
         # "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
     };
+
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+    ];
+
+    extraConfig = ''
+      bar_height = 20
+    '';
   };
 }
