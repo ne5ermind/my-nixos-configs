@@ -127,7 +127,7 @@
         "$mainMod, Q, exec, $terminal"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, V, togglefloating,"
+        "$mainMod, V, togglefloating"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
         "$mainMod, left, movefocus, l"
