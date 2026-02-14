@@ -168,23 +168,23 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        #       "$maiMod SHIFT, left, movewindow, l"
-        #       "$maiMod SHIFT, right, movewindow, r"
-        #       "$maiMod SHIFT, up, movewindow, u"
-        #       "$maiMod SHIFT, down, movewindow, d"
-        #       "$maiMod SHIFT, h, movewindow, l"
-        #       "$maiMod SHIFT, j, movewindow, d"
-        #       "$maiMod SHIFT, k, movewindow, u"
-        #       "$maiMod SHIFT, l, movewindow, r"
+        "$maiMod SHIFT, left, movewindow, l"
+        "$maiMod SHIFT, right, movewindow, r"
+        "$maiMod SHIFT, up, movewindow, u"
+        "$maiMod SHIFT, down, movewindow, d"
+        "$maiMod SHIFT, h, movewindow, l"
+        "$maiMod SHIFT, j, movewindow, d"
+        "$maiMod SHIFT, k, movewindow, u"
+        "$maiMod SHIFT, l, movewindow, r"
 
-        #       "$maiMod ALT, left, moveactive,  -80 0"
-        #       "$maiMod ALT, right, moveactive, 80 0"
-        #       "$maiMod ALT, up, moveactive, 0 -80"
-        #       "$maiMod ALT, down, moveactive, 0 80"
-        #       "$maiMod ALT, h, moveactive,  -80 0"
-        #       "$maiMod ALT, j, moveactive, 0 80"
-        #       "$maiMod ALT, k, moveactive, 0 -80"
-        #       "$maiMod ALT, l, moveactive, 80 0"
+        "$maiMod ALT, left, moveactive,  -80 0"
+        "$maiMod ALT, right, moveactive, 80 0"
+        "$maiMod ALT, up, moveactive, 0 -80"
+        "$maiMod ALT, down, moveactive, 0 80"
+        "$maiMod ALT, h, moveactive,  -80 0"
+        "$maiMod ALT, j, moveactive, 0 80"
+        "$maiMod ALT, k, moveactive, 0 -80"
+        "$maiMod ALT, l, moveactive, 80 0"
       ];
 
       bindm = [
@@ -209,10 +209,10 @@
       ];
 
       windowrule = [
-        "float, class:^(firefox)$, title:^(Picture-in-Picture)$"
-        "float, class:^(zoom)$"
-        "float, class:^(org.quickshell)$"
-        "opacity 0.9 0.9, floating:0, focus:0"
+        #       "float, class:^(firefox)$, title:^(Picture-in-Picture)$"
+        #       "float, class:^(zoom)$"
+        #       "float, class:^(org.quickshell)$"
+        #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
       "exec-once" = [
@@ -225,14 +225,5 @@
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
     ];
-
-    #   extraConfig = ''
-    #     bar_height = 20
-
-    #     hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
-    #     hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
-
-    #     on_double_click = hyprctl dispatch fullscreen 1
-    #   '';
   };
 }
