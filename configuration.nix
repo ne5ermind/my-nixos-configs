@@ -74,6 +74,11 @@
       QT_QPA_PLATFORMTHEME = "qt6ct";
       GDK_PIXBUF_MODULE_FILE = "$(echo ${pkgs.librsvg.out}/lib/gdk-pixbuf-2.0/*/loaders.cache)";
     };
+
+    pathsToLink = [
+      "/share/applications"
+      "/share/xdg-desktop-portal"
+    ];
   };
 
   services = {
