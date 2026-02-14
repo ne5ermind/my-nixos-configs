@@ -234,7 +234,7 @@
           bar_button_padding = 10
           bar_padding = 15
 
-          col.text = rgb(cdd6f4)
+          col.text = rgb(ffffff)
           bar_text_font = JetBrainsMono Nerd Font
           bar_text_size = 11
         }
