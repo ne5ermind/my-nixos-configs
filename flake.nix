@@ -48,13 +48,22 @@
       url = "github:jeslie0/nixos-grub-themes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      follows = "nixpkgs";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
-      mangowc,
       spotatui,
       dms,
       ...
@@ -75,7 +84,6 @@
               };
             };
           }
-          mangowc.nixosModules.mango
         ];
       };
     };
