@@ -220,11 +220,12 @@
     extraConfig = ''
       plugin {
         hyprbars {
-          bar_height = 20
+          bar_height = 22
           bar_color = rgba(1a1a1aaa)
 
-          hyprbars-button = rgb(ff4040), 20, 󰖭, hyprctl dispatch killactive
-          hyprbars-button = rgb(eeee11), 20, , hyprctl dispatch fullscreen 1
+          hyprbars-button = rgb(ff4040), 15, , hyprctl dispatch killactive
+          hyprbars-button = rgb(00ff00), 15, , hyprctl dispatch killactive
+          hyprbars-button = rgb(eeee11), 15, , hyprctl dispatch fullscreen 1
 
           bar_title_enabled = false
           bar_part_of_window = true
