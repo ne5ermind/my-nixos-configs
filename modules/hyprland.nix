@@ -113,6 +113,15 @@
         initial_workspace_tracking = 1;
       };
 
+      "plugin:hyprbars" = {
+        bar_height = 10;
+        bar_color = "rgba(1a1a1aaa)";
+        hyprbars-button = [
+          "rgb(ff4040), 12,   , hyprctl dispatch killactive"
+          "rgb(eeee11), 12, , hyprctl dispatch fullscreen 1"
+        ];
+      };
+
       bind = [
         "$mainMod, Q, exec, $terminal"
         "$mainMod, C, killactive,"
@@ -208,13 +217,13 @@
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
     ];
 
-    extraConfig = ''
-      bar_height = 20
+    #   extraConfig = ''
+    #     bar_height = 20
 
-      hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
-      hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
+    #     hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
+    #     hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
 
-      on_double_click = hyprctl dispatch fullscreen 1
-    '';
+    #     on_double_click = hyprctl dispatch fullscreen 1
+    #   '';
   };
 }
