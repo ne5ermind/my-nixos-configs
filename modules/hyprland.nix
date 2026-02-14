@@ -181,11 +181,6 @@
         "$mod SHIFT, k, movewindow, u"
         "$mod SHIFT, l, movewindow, r"
 
-        "$mod CTRL, left, resizeactive, -80 0"
-        "$mod CTRL, right, resizeactive, 80 0"
-        "$mod CTRL, up, resizeactive, 0 -80"
-        "$mod CTRL, down, resizeactive, 0 80"
-
         "$mod ALT, left, moveactive,  -80 0"
         "$mod ALT, right, moveactive, 80 0"
         "$mod ALT, up, moveactive, 0 -80"
