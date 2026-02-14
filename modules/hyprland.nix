@@ -185,10 +185,6 @@
         "$mod CTRL, right, resizeactive, 80 0"
         "$mod CTRL, up, resizeactive, 0 -80"
         "$mod CTRL, down, resizeactive, 0 80"
-        "$mod CTRL, h, resizeactive, -80 0"
-        "$mod CTRL, j, resizeactive, 0 80"
-        "$mod CTRL, k, resizeactive, 0 -80"
-        "$mod CTRL, l, resizeactive, 80 0"
 
         "$mod ALT, left, moveactive,  -80 0"
         "$mod ALT, right, moveactive, 80 0"
