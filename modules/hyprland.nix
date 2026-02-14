@@ -15,6 +15,7 @@
 
       "$terminal" = "kitty";
       "$mainMod" = "SUPER";
+      "$mod" = "SUPER";
 
       env = [
         "XCURSOR_SIZE,18"
@@ -148,9 +149,9 @@
         "$mainMod SHIFT, P, dpms, toggle"
         "$mainMod SHIFT, C, exec, hyprctl dispatch togglefloating && hyprctl dispatch centerwindow"
 
-        "$mod, 1, workspace, 1"
-        "$mod, 2, workspace, 2"
-        "$mod, 3, workspace, 3"
+        "$mainMod, 1, workspace, 1"
+        "$mainMod, 2, workspace, 2"
+        "$mainMod, 3, workspace, 3"
         "$mod, 4, workspace, 4"
         "$mod, 5, workspace, 5"
         "$mod, 6, workspace, 6"
