@@ -70,7 +70,7 @@
           {
             home-manager = {
               useGlobalPkgs = true;
-              useUserPackages = false;
+              useUserPackages = true;
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
               extraSpecialArgs = {
