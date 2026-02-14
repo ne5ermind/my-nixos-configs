@@ -194,7 +194,7 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      windowrulev2 = [
+      windowrule = [
         "float,class:^(KittyRunner)$"
         "noborder, class:^(org\\.wezfurlong\\.wezterm)$"
         "noborder, class:^(Alacritty)$"
