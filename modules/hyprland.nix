@@ -115,7 +115,7 @@
       };
 
       "plugin:hyprbars" = {
-        bar_height = 10;
+        bar_height = 20;
         bar_color = "rgba(1a1a1aaa)";
         hyprbars-button = [
           "rgb(ff4040), 12,   , hyprctl dispatch killactive"
