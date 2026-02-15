@@ -32,8 +32,9 @@
       enable = true;
     };
 
-    pulseaudio.enable = false;
   };
+
+  pulseaudio.enable = false;
 
   nix = {
     settings = {
