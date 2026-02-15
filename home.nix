@@ -26,7 +26,7 @@
       starship
       neo
       cava
-      inputs.zen-browser.packages."${pkgs.system}".default
+      inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
       # wpsoffice-cn
       dbeaver-bin
       v2raya
@@ -256,17 +256,19 @@
 
     spicetify = {
       enable = true;
-      theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.lucid;
-      enabledExtensions = with inputs.spicetify-nix.legacyPackages.${pkgs.system}.extensions; [
-        adblock
-        shuffle
-        hidePodcasts
-        fullAppDisplay
-      ];
-      enabledCustomApps = with inputs.spicetify-nix.legacyPackages.${pkgs.system}.apps; [
-        newReleases
-        lyricsPlus
-      ];
+      theme = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.themes.lucid;
+      enabledExtensions =
+        with inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.extensions; [
+          adblock
+          shuffle
+          hidePodcasts
+          fullAppDisplay
+        ];
+      enabledCustomApps =
+        with inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.apps; [
+          newReleases
+          lyricsPlus
+        ];
     };
 
     kitty = {

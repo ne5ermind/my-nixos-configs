@@ -31,8 +31,6 @@
     bluetooth = {
       enable = true;
     };
-
-    pulseaudio.enable = false;
   };
 
   nix = {
@@ -89,6 +87,8 @@
     getty.autologinUser = "never";
 
     blueman.enable = true;
+
+    pulseaudio.enable = false;
 
     upower.enable = true;
 
@@ -179,5 +179,5 @@
 
   console.useXkbConfig = true;
 
-  system.stateVersion = "25.11";
+  stdenv.hostPlatform.system.stateVersion = "25.11";
 }
