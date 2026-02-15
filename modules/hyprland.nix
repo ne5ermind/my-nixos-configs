@@ -30,9 +30,9 @@
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
-        border_size = 4;
+        border_size = 2;
         "col.active_border" = "rgba(1a1a1aaa)";
-        "col.inactive_border" = "rgba(1a1a1aaa)";
+        "col.inactive_border" = "rgba(00000000)";
       };
 
       decoration = {
@@ -214,76 +214,59 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
-      inputs.hypr-dynamic-borders.packages.${pkgs.system}.hypr-dynamic-borders
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
       inputs.hyprgrass.packages.${pkgs.system}.default
     ];
 
     extraConfig = ''
-            plugin {
-              hyprbars {
-                bar_height = 27
-                bar_color = rgba(1a1a1aaa)
+      plugin {
+        hyprbars {
+          bar_height = 27
+          bar_color = rgba(1a1a1aaa)
 
-                hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
-                hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
-                hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch fullscreen 1
+          hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
+          hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
+          hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch fullscreen 1
 
-                bar_title_enabled = true
-                bar_part_of_window = true
-                bar_precedence_over_border = true
-                bar_buttons_alignment = left
-                bar_button_padding = 10
-                bar_padding = 20
+          bar_title_enabled = true
+          bar_part_of_window = true
+          bar_precedence_over_border = true
+          bar_buttons_alignment = left
+          bar_button_padding = 10
+          bar_padding = 20
 
-                col.text = rgb(ffffff)
-                bar_text_font = JetBrainsMono Nerd Font
-                bar_text_size = 11
-              }
+          col.text = rgb(ffffff)
+          bar_text_font = JetBrainsMono Nerd Font
+          bar_text_size = 11
+        }
 
-              dynamic-cursors {
-                enabled = true
-                mode = shake
+        dynamic-cursors {
+          enabled = true
+          mode = shake
 
-                shake {
-                  enabled = true
-                  nearest = true
-                  threshold = 6.0
-                  base = 4.0
-                  speed = 4.0
-                  influence = 0.0
-                  limit = 0.0
-                  timeout = 1000
-                  effects = false
-                  ipc = false
-                }
-              }
+          shake {
+            enabled = true
+            nearest = true
+            threshold = 6.0
+            base = 4.0
+            speed = 4.0
+            influence = 0.0
+            limit = 0.0
+            timeout = 1000
+            effects = false
+            ipc = false
+          }
+        }
 
-              touch_gestures {
-                sensitivity = 4.0
-                workspace_swipe_fingers = 3
-                workspace_swipe_edge = d
-                long_press_delay = 400
-                resize_on_border_long_press = true
-                edge_margin = 10
-               }
-
-      #       borders-plus-plus {
-      #         add_borders = 1 
-      #         col.border_1 = rgba(1a1a1aaa)
-      #         border_size_1 = 4
-      #         natural_rounding = yes
-      #       }
-
-              dynamic-borders = {
-                enabled = true;
-                "col.active_border_1" = "rgba(333333aa)";   
-                "col.inactive_border_1" = "rgba(00000000)";
-
-                border_size_1 = 1;
-              };
-            }
+        touch_gestures {
+          sensitivity = 4.0
+          workspace_swipe_fingers = 3
+          workspace_swipe_edge = d
+          long_press_delay = 400
+          resize_on_border_long_press = true
+          edge_margin = 10
+         }
+      }
     '';
   };
 }

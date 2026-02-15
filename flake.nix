@@ -62,11 +62,6 @@
       url = "github:horriblename/hyprgrass";
       inputs.hyprland.follows = "hyprland";
     };
-
-    hypr-dynamic-borders = {
-      url = "github:SimenSvebak/hypr-dynamic-borders";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
 
   outputs =
