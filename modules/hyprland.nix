@@ -36,7 +36,7 @@
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 20;
         active_opacity = 1;
         inactive_opacity = 0.8;
         fullscreen_opacity = 1;
@@ -44,7 +44,7 @@
         blur = {
           enabled = true;
           size = 3;
-          passes = 2;
+          passes = 3;
           new_optimizations = "on";
           ignore_opacity = true;
           xray = true;
