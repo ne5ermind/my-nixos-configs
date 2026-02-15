@@ -244,7 +244,7 @@
 
           col.border_1 = rgba(1a1a1aaa)
 
-          border_size_1 = 3
+          border_size_1 = 10
 
           natural_rounding = yes
         }
