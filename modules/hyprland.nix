@@ -30,7 +30,7 @@
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
-        border_size = 5;
+        border_size = 1;
         "col.active_border" = "rgba(333333aa)";
         "col.inactive_border" = "rgba(00000000)";
       };
@@ -271,7 +271,7 @@
         borders-plus-plus {
           add_borders = 1 
           col.border_1 = rgba(1a1a1aaa)
-          border_size_1 = -4
+          border_size_1 = 4
           natural_rounding = yes
         }
       }
