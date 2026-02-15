@@ -215,6 +215,7 @@
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+      inputs.hyprgrass.packages.${pkgs.system}.default
     ];
 
     extraConfig = ''
@@ -256,6 +257,15 @@
             ipc = false
           }
         }
+
+      touch_gestures {
+        sensitivity = 4.0
+        workspace_swipe_fingers = 3
+        workspace_swipe_edge = d
+        long_press_delay = 400
+        resize_on_border_long_press = true
+        edge_margin = 10
+       }
       }
     '';
   };
