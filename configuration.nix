@@ -61,7 +61,9 @@
       papirus-icon-theme
       kdePackages.qt6ct
       zfxtop
-      # zapret
+      (discord.override {
+        withVencord = true;
+      })
     ];
 
     variables = {
