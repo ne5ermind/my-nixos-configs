@@ -214,7 +214,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.dynamic-cursors
     ];
 
     extraConfig = ''
