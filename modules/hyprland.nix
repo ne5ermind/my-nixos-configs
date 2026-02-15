@@ -31,8 +31,8 @@
         allow_tearing = false;
         layout = "dwindle";
         border_size = 2;
-        "col.active_border" = "rgba(1a1a1aaa)";
-        "col.inactive_border" = "rgba(00000000)";
+        "col.active_border" = "rgba(333333aa)";
+        "col.inactive_border" = "rgba(1a1a1aaa)";
       };
 
       decoration = {
