@@ -255,7 +255,7 @@
             effects = false
             ipc = false
           }
-        };
+        }
       }
     '';
   };
