@@ -168,10 +168,14 @@
     ];
   };
 
-  fonts.packages = with pkgs; [
-    roboto
-    nerd-fonts.jetbrains-mono
-  ];
+  fonts = {
+    packages = with pkgs; [
+      roboto
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.fira-code
+      nerd-fonts.symbols-only
+    ];
+  };
 
   security = {
     polkit.enable = true;
