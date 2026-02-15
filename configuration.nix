@@ -179,5 +179,5 @@
 
   console.useXkbConfig = true;
 
-  stdenv.hostPlatform.system.stateVersion = "25.11";
+  system.stateVersion = "25.11";
 }
