@@ -5,7 +5,7 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = false;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
     settings = {
       monitor = [
@@ -213,9 +213,9 @@
     };
 
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
-      inputs.hyprgrass.packages.${pkgs.system}.default
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.stdenv.hostPlatform.system}.hyprbars
+      inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
+      inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     extraConfig = ''
