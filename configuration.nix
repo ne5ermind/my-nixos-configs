@@ -31,6 +31,12 @@
     bluetooth = {
       enable = true;
     };
+
+    pulseaudio.enable = false;
+  };
+
+  sound = {
+    enable = true;
   };
 
   nix = {
@@ -107,6 +113,14 @@
       layout = "us,ru";
       options = "caps:escape";
     };
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
   };
 
   networking = {
@@ -162,7 +176,10 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  security.polkit.enable = true;
+  security = {
+    polkit.enable = true;
+    rtkit.enable = true;
+  };
 
   console.useXkbConfig = true;
 
