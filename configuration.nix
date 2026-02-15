@@ -35,10 +35,6 @@
     pulseaudio.enable = false;
   };
 
-  sound = {
-    enable = true;
-  };
-
   nix = {
     settings = {
       auto-optimise-store = true;
