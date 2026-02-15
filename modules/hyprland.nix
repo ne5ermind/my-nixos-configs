@@ -30,7 +30,7 @@
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
-        border_size = 2;
+        border_size = 3;
         "col.active_border" = "rgba(333333ff)";
         "col.inactive_border" = "rgba(1a1a1aaa)";
       };
