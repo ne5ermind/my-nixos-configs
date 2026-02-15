@@ -214,7 +214,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
     ];
 
     extraConfig = ''
@@ -239,15 +239,23 @@
           bar_text_size = 11
         }
 
-        borders-plus-plus {
-          add_borders = 1 
+        dynamic-cursors {
+          enabled = true
+          mode = shake
 
-          col.border_1 = rgba(1a1a1aaa)
-
-          border_size_1 = 10
-
-          natural_rounding = yes
-        }
+          shake {
+            enabled = true
+            nearest = true
+            threshold = 6.0
+            base = 4.0
+            speed = 4.0
+            influence = 0.0
+            limit = 0.0
+            timeout = 1000
+            effects = false
+            ipc = false
+          }
+        };
       }
     '';
   };
