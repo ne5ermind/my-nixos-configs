@@ -214,6 +214,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
     ];
 
     extraConfig = ''
@@ -236,6 +237,16 @@
           col.text = rgb(ffffff)
           bar_text_font = JetBrainsMono Nerd Font
           bar_text_size = 11
+        }
+
+        borders-plus-plus {
+          add_borders = 1 
+
+          col.border_1 = rgba(1a1a1aaa)
+
+          border_size_1 = 3
+
+          natural_rounding = yes
         }
       }
     '';
