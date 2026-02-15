@@ -30,9 +30,9 @@
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
-        border_size = 2;
+        border_size = 1;
         "col.active_border" = "rgba(333333aa)";
-        "col.inactive_border" = "rgba(1a1a1aaa)";
+        "col.inactive_border" = "rgba(00000000)";
       };
 
       decoration = {
@@ -214,7 +214,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.border-plus-plus
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
       inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
       inputs.hyprgrass.packages.${pkgs.system}.default
     ];
@@ -271,7 +271,7 @@
         borders-plus-plus {
           add_borders = 1 
           col.border_1 = rgba(1a1a1aaa)
-          border_size_1 = 4
+          border_size_1 = -4
           natural_rounding = yes
         }
       }
