@@ -136,14 +136,6 @@
   programs = {
     dconf.enable = true;
 
-    #   hyprland = {
-    #     enable = true;
-    #     xwayland.enable = true;
-    #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    #     portalPackage =
-    #       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    #   };
-
     zsh = {
       enable = true;
     };
@@ -174,7 +166,10 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.fira-code
       nerd-fonts.symbols-only
+      noto-fonts-color-emoji
     ];
+
+    fontconfig.defaultFonts.emoji = [ "Noto Color Emoji" ];
   };
 
   security = {
