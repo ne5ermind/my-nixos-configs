@@ -30,10 +30,9 @@
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
-        # border_size = 0;
-        border_size = 1;
+        border_size = 2;
         "col.active_border" = "rgba(333333ff)";
-        "col.inactive_border" = "rgba(00000000)";
+        "col.inactive_border" = "rgba(1a1a1aaa)";
       };
 
       decoration = {
