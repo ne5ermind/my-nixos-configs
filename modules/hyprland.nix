@@ -162,19 +162,19 @@
         "$maiMod SHIFT, right, movewindow, r"
         "$maiMod SHIFT, up, movewindow, u"
         "$maiMod SHIFT, down, movewindow, d"
-        "$maiMod SHIFT, h, movewindow, l"
-        "$maiMod SHIFT, j, movewindow, d"
-        "$maiMod SHIFT, k, movewindow, u"
-        "$maiMod SHIFT, l, movewindow, r"
+        #       "$maiMod SHIFT, h, movewindow, l"
+        #       "$maiMod SHIFT, j, movewindow, d"
+        #       "$maiMod SHIFT, k, movewindow, u"
+        #       "$maiMod SHIFT, l, movewindow, r"
 
         "$maiMod ALT, left, moveactive,  -80 0"
         "$maiMod ALT, right, moveactive, 80 0"
         "$maiMod ALT, up, moveactive, 0 -80"
         "$maiMod ALT, down, moveactive, 0 80"
-        "$maiMod ALT, h, moveactive,  -80 0"
-        "$maiMod ALT, j, moveactive, 0 80"
-        "$maiMod ALT, k, moveactive, 0 -80"
-        "$maiMod ALT, l, moveactive, 80 0"
+        #       "$maiMod ALT, h, moveactive,  -80 0"
+        #       "$maiMod ALT, j, moveactive, 0 80"
+        #       "$maiMod ALT, k, moveactive, 0 -80"
+        #       "$maiMod ALT, l, moveactive, 80 0"
       ];
 
       bindm = [
