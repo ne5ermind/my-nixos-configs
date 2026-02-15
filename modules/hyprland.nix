@@ -231,7 +231,7 @@
           bar_precedence_over_border = true
           bar_buttons_alignment = left
           bar_button_padding = 10
-          bar_padding = 15
+          bar_padding = 20
 
           col.text = rgb(ffffff)
           bar_text_font = JetBrainsMono Nerd Font
