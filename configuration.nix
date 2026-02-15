@@ -159,6 +159,7 @@
       "wheel"
       "docker"
       "video"
+      "audio"
       "input"
     ];
     shell = pkgs.zsh;
