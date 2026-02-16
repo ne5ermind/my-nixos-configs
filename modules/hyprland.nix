@@ -207,7 +207,7 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, vertical, dispatcher, overview:toggle"
+        # "3, vertical, dispatcher, overview:toggle"
       ];
 
       gestures = {
@@ -282,6 +282,9 @@
           workspaceMargin = 5
         }
       }
+
+      gesture = swipe, up, dispatcher, overview:toggle
+      gesture = swipe, down, dispatcher, overview:toggle
     '';
   };
 }
