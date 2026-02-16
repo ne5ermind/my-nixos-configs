@@ -207,8 +207,13 @@
 
       gesture = [
         "3, horizontal, workspace"
-        # "3, vertical, workspace"
+        "3, up, overview:toggle"
+        "3, down, overview:toggle"
       ];
+
+      gestures = {
+        workspace_swipe_distance = 500;
+      };
 
       "exec-once" = [
         "dms run"
