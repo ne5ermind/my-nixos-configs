@@ -211,7 +211,7 @@
       ];
 
       gestures = {
-        workspace_swipe_distance = 500;
+        workspace_swipe_distance = 300;
       };
 
       "exec-once" = [
