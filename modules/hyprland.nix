@@ -205,10 +205,10 @@
         #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
-      #     gesture = [
-      #       "3, horizontal, workspace"
-      #       "3, vertical, workspace"
-      #     ];
+      gesture = [
+        "3, horizontal, workspace"
+        # "3, vertical, workspace"
+      ];
 
       "exec-once" = [
         "dms run"
@@ -230,7 +230,6 @@
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
       inputs.hyprspace.packages.${pkgs.system}.Hyprspace
-      inputs.hyprgrass.packages.${pkgs.system}.default
     ];
 
     extraConfig = ''
@@ -277,36 +276,6 @@
           panelHeight = 150
           panelBorderWidth = 2
           workspaceMargin = 5
-        }
-
-        touch_gestures {
-          sensitivity = 1.0
-          workspace_swipe_fingers = 3
-          long_press_delay = 400
-
-          # swipe left from right edge
-          hyprgrass-bind = , swipe:r:l, workspace, +1
-          hyprgrass-bind = , swipe:l:r, workspace, -1
-
-          # swipe up from bottom edge
-          hyprgrass-bind = , swipe:d:u, overview:toggle
-
-          # swipe down with 4 fingers
-          hyprgrass-bind = , swipe:4:d, killactive
-
-          # swipe diagonally left and down with 3 fingers
-          # l (or r) must come before d and u
-          hyprgrass-bind = , swipe:3:ld, exec, foot
-
-          # tap with 3 fingers
-          hyprgrass-bind = , tap:3, exec, kitty
-
-          # pinch in with 3 fingers
-          hyprgrass-bind = , pinch:3:i, exec, kitty
-
-          # longpress can trigger mouse binds:
-          hyprgrass-bindm = , longpress:2, movewindow
-          hyprgrass-bindm = , longpress:3, resizewindow
         }
       }
     '';
