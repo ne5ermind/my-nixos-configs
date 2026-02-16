@@ -420,6 +420,11 @@
       package = pkgs.bibata-cursors;
       size = 24;
     };
+
+    iconTheme = {
+      name = "Reversal-black";
+      package = pkgs.reversal-icon-theme;
+    };
   };
 
   xdg.mimeApps = {
@@ -431,10 +436,9 @@
       "x-scheme-handler/about" = "zen.desktop";
       "x-scheme-handler/unknown" = "zen.desktop";
     };
+
+    configFile."gtk-4.0/settings.ini".force = true;
+    configFile."gtk-3.0/settings.ini".force = true;
   };
 
-  gtk.iconTheme = {
-    name = "Reversal-black";
-    package = pkgs.reversal-icon-theme;
-  };
 }
