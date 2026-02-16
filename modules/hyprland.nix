@@ -205,6 +205,10 @@
         #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
+      gestures = {
+        workspace_swipe = true;
+      };
+
       gesture = [
         "3, horizontal, workspace"
         "3, up, overview:toggle"
@@ -216,15 +220,15 @@
         # "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
-      plugin = {
-        overview = {
-          innerGap = 5;
-          outerGap = 5;
-          panelHeight = 150;
-          exitOnSwitch = true;
-          drawActiveWorkspace = true;
-        };
-      };
+      #     plugin = {
+      #       overview = {
+      #         innerGap = 5;
+      #         outerGap = 5;
+      #         panelHeight = 150;
+      #         exitOnSwitch = true;
+      #         drawActiveWorkspace = true;
+      #       };
+      #     };
     };
 
     plugins = [
@@ -272,6 +276,12 @@
             effects = false
             ipc = false
           }
+        }
+
+        overview {
+          panelHeight = 150
+          panelBorderWidth = 2
+          workspaceMargin = 5
         }
       }
     '';
