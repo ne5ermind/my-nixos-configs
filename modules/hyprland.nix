@@ -205,10 +205,6 @@
         #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
-      gestures = {
-        workspace_swipe = true;
-      };
-
       gesture = [
         "3, horizontal, workspace"
         "3, up, overview:toggle"
