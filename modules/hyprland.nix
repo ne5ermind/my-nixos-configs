@@ -259,7 +259,7 @@
         }
 
         touch_gestures {
-          sensitivity = 1.0
+          sensitivity = 4.0
           workspace_swipe_fingers = 3
           workspace_swipe_edge = d
           long_press_delay = 400
