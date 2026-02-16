@@ -267,6 +267,9 @@
           edge_margin = 10
          }
       }
+
+      hyprgrass-bind = , swipe:3:left, workspace, e+1
+      hyprgrass-bind = , swipe:3:right, workspace, e-1
     '';
   };
 }
