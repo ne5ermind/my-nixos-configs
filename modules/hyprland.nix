@@ -207,13 +207,12 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, up, overview:toggle"
+        "3, up, workspace"
       ];
 
       "exec-once" = [
         "dms run"
         "kitty zsh -c 'fastfetch; exec zsh'"
-        # "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
       #     plugin = {
@@ -231,7 +230,6 @@
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
       inputs.hyprspace.packages.${pkgs.system}.Hyprspace
-      # inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     extraConfig = ''
@@ -283,13 +281,3 @@
     '';
   };
 }
-# touch_gestures {
-#   sensitivity = 4.0
-#     workspace_swipe_fingers = 3
-#     workspace_swipe_edge = d
-#     long_press_delay = 400
-#     resize_on_border_long_press = true
-#     edge_margin = 10
-#     hyprgrass-bind = , swipe:3:left, workspace, e+1
-#     hyprgrass-bind = , swipe:3:right, workspace, e-1
-# }
