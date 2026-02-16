@@ -288,14 +288,32 @@
           sensitivity = 1.0
           workspace_swipe_fingers = 3
           long_press_delay = 400
+
+          # swipe left from right edge
+          hyprgrass-bind = , swipe:r:l, workspace, +1
+          hyprgrass-bind = , swipe:l:r, workspace, -1
+
+          # swipe up from bottom edge
+          hyprgrass-bind = , swipe:d:u, overview:toggle
+
+          # swipe down with 4 fingers
+          hyprgrass-bind = , swipe:4:d, killactive
+
+          # swipe diagonally left and down with 3 fingers
+          # l (or r) must come before d and u
+          hyprgrass-bind = , swipe:3:ld, exec, foot
+
+          # tap with 3 fingers
+          hyprgrass-bind = , tap:3, exec, kitty
+
+          # pinch in with 3 fingers
+          hyprgrass-bind = , pinch:3:i, exec, kitty
+
+          # longpress can trigger mouse binds:
+          hyprgrass-bindm = , longpress:2, movewindow
+          hyprgrass-bindm = , longpress:3, resizewindow
         }
       }
-
-      hyprgrass-bind = , swipe:3:up, overview:toggle
-      hyprgrass-bind = , swipe:3:left, workspace, e+1
-      hyprgrass-bind = , swipe:3:right, workspace, e-1
-      hyprgrass-bind = , edge:r:l, workspace, e+1
-      hyprgrass-bind = , edge:l:r, workspace, e-1
 
       gestures {
         workspace_swipe = false
