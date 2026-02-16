@@ -58,10 +58,10 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    hyprgrass = {
-      url = "github:horriblename/hyprgrass";
-      inputs.hyprland.follows = "hyprland";
-    };
+    #   hyprgrass = {
+    #     url = "github:horriblename/hyprgrass";
+    #     inputs.hyprland.follows = "hyprland";
+    #   };
   };
 
   outputs =

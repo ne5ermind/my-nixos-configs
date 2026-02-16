@@ -35,6 +35,13 @@
         "col.inactive_border" = "rgba(1a1a1aaa)";
       };
 
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_distance = 300;
+        workspace_swipe_invert = true;
+      };
+
       decoration = {
         rounding = 20;
         active_opacity = 1;
@@ -215,7 +222,7 @@
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
-      inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.default
+      # inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     extraConfig = ''
@@ -257,18 +264,17 @@
             ipc = false
           }
         }
-
-        touch_gestures {
-          sensitivity = 4.0
-          workspace_swipe_fingers = 3
-          workspace_swipe_edge = d
-          long_press_delay = 400
-          resize_on_border_long_press = true
-          edge_margin = 10
-          hyprgrass-bind = , swipe:3:left, workspace, e+1
-          hyprgrass-bind = , swipe:3:right, workspace, e-1
-         }
       }
     '';
   };
 }
+# touch_gestures {
+#   sensitivity = 4.0
+#     workspace_swipe_fingers = 3
+#     workspace_swipe_edge = d
+#     long_press_delay = 400
+#     resize_on_border_long_press = true
+#     edge_margin = 10
+#     hyprgrass-bind = , swipe:3:left, workspace, e+1
+#     hyprgrass-bind = , swipe:3:right, workspace, e-1
+# }
