@@ -205,6 +205,11 @@
         #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
+      gesture = [
+        "3, horizontal, workspace"
+        "3, up, overview:toggle"
+      ];
+
       "exec-once" = [
         "dms run"
         "kitty zsh -c 'fastfetch; exec zsh'"
@@ -215,8 +220,19 @@
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
+      inputs.hyprspace.packages.${pkgs.system}.Hyprspace
       # inputs.hyprgrass.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
+
+    plugin = {
+      overview = {
+        innerGap = 5;
+        outerGap = 5;
+        panelHeight = 150;
+        exitOnSwitch = true;
+        drawActiveWorkspace = true;
+      };
+    };
 
     extraConfig = ''
       plugin {
@@ -258,8 +274,6 @@
           }
         }
       }
-
-      gesture = 3, horizontal, workspace
     '';
   };
 }
