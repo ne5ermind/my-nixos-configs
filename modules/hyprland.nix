@@ -205,6 +205,11 @@
         #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_cancel_ratio = 0.15;
+      };
+
       #     gesture = [
       #       "3, horizontal, workspace"
       #       "3, vertical, workspace"
@@ -291,6 +296,10 @@
       hyprgrass-bind = , swipe:3:right, workspace, e-1
       hyprgrass-bind = , edge:r:l, workspace, e+1
       hyprgrass-bind = , edge:l:r, workspace, e-1
+
+      gestures {
+        workspace_swipe = false
+      }
     '';
   };
 }
