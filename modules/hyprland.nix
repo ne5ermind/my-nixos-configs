@@ -283,8 +283,8 @@
         }
       }
 
-      gesture = swipe, up, dispatcher, overview:toggle
-      gesture = swipe, down, dispatcher, overview:toggle
+      gesture = 3, up, dispatcher, overview:toggle
+      gesture = 3, down, dispatcher, overview:toggle
     '';
   };
 }
