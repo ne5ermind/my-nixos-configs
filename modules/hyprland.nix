@@ -314,10 +314,6 @@
           hyprgrass-bindm = , longpress:3, resizewindow
         }
       }
-
-      gestures {
-        workspace_swipe = false
-      }
     '';
   };
 }
