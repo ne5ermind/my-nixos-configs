@@ -133,7 +133,6 @@
         "$mainMod, n, exec, dms ipc call notifications toggle"
         "$mainMod shift, n, exec, dms ipc call notepad toggle"
         "$mainMod, y, exec, dms ipc call dankdash wallpaper"
-        "$mainMod, tab, exec, dms ipc call hypr toggleoverview"
         "$mainMod SHIFT, Slash, exec, dms ipc call keybinds toggle hyprland"
         "$mainMod SHIFT, P, dpms, toggle"
         "$mainMod SHIFT, C, exec, hyprctl dispatch togglefloating && hyprctl dispatch centerwindow"
@@ -207,8 +206,8 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, up, overview:toggle"
-        "3, down, overview:toggle"
+        "3, up, dispatcher, overview:toggle"
+        "3, down, dispatcher, overview:toggle"
       ];
 
       gestures = {
