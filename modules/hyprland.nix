@@ -207,6 +207,7 @@
 
       gesture = [
         "3, horizontal, workspace"
+        "3, vertical, exec, ${pkgs.pyprland}/bin/pypr expose"
         # "3, vertical, dispatcher, overview:toggle"
       ];
 
@@ -214,9 +215,10 @@
         workspace_swipe_distance = 300;
       };
 
-      "exec-once" = [
+      exec-once = [
         "dms run"
         "kitty zsh -c 'fastfetch; exec zsh'"
+        "${pkgs.pyprland}/bin/pypr"
       ];
 
       #     plugin = {

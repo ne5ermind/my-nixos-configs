@@ -33,6 +33,7 @@
       geeqie
       termius
       unzip
+      pyprland
       (yazi.override {
         _7zz = _7zz-rar;
       })
@@ -441,6 +442,13 @@
 
     configFile."gtk-4.0/settings.ini".force = true;
     configFile."gtk-3.0/settings.ini".force = true;
+    configFile."hypr/pyprland.toml".text = ''
+      [pyprland]
+      plugins = ["expose"]
+
+      [expose]
+      include_special = false
+    '';
   };
 
 }
