@@ -265,11 +265,10 @@
           long_press_delay = 400
           resize_on_border_long_press = true
           edge_margin = 10
+          hyprgrass-bind = , swipe:3:left, workspace, e+1
+          hyprgrass-bind = , swipe:3:right, workspace, e-1
          }
       }
-
-      hyprgrass-bind = , swipe:3:left, workspace, e+1
-      hyprgrass-bind = , swipe:3:right, workspace, e-1
     '';
   };
 }
