@@ -207,7 +207,7 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, vertical, dispatch, overview:toggle"
+        "3, vertical, dispatcher, overview:toggle"
       ];
 
       gestures = {
