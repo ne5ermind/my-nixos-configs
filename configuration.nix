@@ -13,6 +13,10 @@
 
   boot = {
     kernelModules = [ "xt_TPROXY" ];
+    initrd.availableKernelModules = [
+      "i2c_hid_acpi"
+      "i2c_hid"
+    ];
 
     loader = {
       efi.canTouchEfiVariables = true;
@@ -117,6 +121,10 @@
       pulse.enable = true;
       jack.enable = true;
     };
+
+    udev.extraRules = ''
+      ACTION=="add|change", SUBSYSTEM=="input", ATTRS{id/vendor}=="2808", ATTRS{id/product}=="0106", ENV{ID_INPUT_MOUSE}="0", ENV{ID_INPUT_TOUCHPAD}="1"
+    '';
   };
 
   networking = {
