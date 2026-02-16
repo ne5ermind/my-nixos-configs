@@ -205,10 +205,10 @@
         #       "opacity 0.9 0.9, floating:0, focus:0"
       ];
 
-      gesture = [
-        "3, horizontal, workspace"
-        "3, vertical, workspace"
-      ];
+      #     gesture = [
+      #       "3, horizontal, workspace"
+      #       "3, vertical, workspace"
+      #     ];
 
       "exec-once" = [
         "dms run"
@@ -230,6 +230,7 @@
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
       inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+      inputs.hyprgrass.packages.${pkgs.system}.default
     ];
 
     extraConfig = ''
@@ -277,7 +278,19 @@
           panelBorderWidth = 2
           workspaceMargin = 5
         }
+
+        touch_gestures {
+          sensitivity = 1.0
+          workspace_swipe_fingers = 3
+          long_press_delay = 400
+        }
       }
+
+      hyprgrass-bind = , swipe:3:up, overview:toggle
+      hyprgrass-bind = , swipe:3:left, workspace, e+1
+      hyprgrass-bind = , swipe:3:right, workspace, e-1
+      hyprgrass-bind = , edge:r:l, workspace, e+1
+      hyprgrass-bind = , edge:l:r, workspace, e-1
     '';
   };
 }
