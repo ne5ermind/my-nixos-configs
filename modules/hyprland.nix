@@ -111,6 +111,7 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         initial_workspace_tracking = 1;
+        middle_click_paste = false;
       };
 
       bind = [
@@ -206,7 +207,7 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, vertical, dispatcher, overview:toggle"
+        "3, vertical, dispatch, overview:toggle"
       ];
 
       gestures = {
