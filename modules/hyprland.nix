@@ -35,13 +35,6 @@
         "col.inactive_border" = "rgba(1a1a1aaa)";
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_distance = 300;
-        workspace_swipe_invert = true;
-      };
-
       decoration = {
         rounding = 20;
         active_opacity = 1;
@@ -265,6 +258,8 @@
           }
         }
       }
+
+      gesture = 3, horizontal, workspace
     '';
   };
 }
