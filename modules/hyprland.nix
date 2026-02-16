@@ -207,7 +207,7 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, up, workspace"
+        "3, vertical, workspace"
       ];
 
       "exec-once" = [
