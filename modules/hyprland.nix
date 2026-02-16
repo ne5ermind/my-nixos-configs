@@ -283,7 +283,7 @@
         }
       }
 
-      gesture = 3, up, dispatcher, exec kitty
+      gesture = 3, up, dispatcher, exec, kitty
     '';
   };
 }
