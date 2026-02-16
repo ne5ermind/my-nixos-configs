@@ -207,7 +207,6 @@
 
       gesture = [
         "3, horizontal, workspace"
-        "3, vertical, exec, ${pkgs.pyprland}/bin/pypr expose"
         # "3, vertical, dispatcher, overview:toggle"
       ];
 
@@ -285,7 +284,7 @@
         }
       }
 
-      gesture = 3, vertical, dispatcher, exec, kitty
+        gesture = 3, vertical, exec, ${pkgs.pyprland}/bin/pypr expose
     '';
   };
 }
