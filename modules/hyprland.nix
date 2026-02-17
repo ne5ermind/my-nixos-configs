@@ -134,7 +134,7 @@
 
         # dms controls
         "$mainMod, space, exec, dms ipc call spotlight toggle"
-        "$mainMod SHIFT, v, exec, dms ipc call clipboard toggle"
+        "$mainMod ALT, v, exec, dms ipc call clipboard toggle"
         "$mainMod, m, exec, dms ipc call processlist focusortoggle"
         "$mainMod, comma, exec, dms ipc call settings focusortoggle"
         "$mainMod, n, exec, dms ipc call notifications toggle"
