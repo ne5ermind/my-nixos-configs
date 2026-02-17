@@ -117,18 +117,24 @@
       bind = [
         "$mainMod, Q, exec, $terminal"
         "$mainMod, C, killactive,"
-        "$mainMod, M, exit,"
+        "$mainMod SHIFT, C, forcekillactive,"
         "$mainMod, V, togglefloating"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
+        "$mainMod SHIFT, V, exec, hyprctl dispatch centerwindow"
+
+        # move focus
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
+
         "$mainMod, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
+
+        # dms controls
         "$mainMod, space, exec, dms ipc call spotlight toggle"
-        "$mainMod, v, exec, dms ipc call clipboard toggle"
+        "$mainMod SHIFT, v, exec, dms ipc call clipboard toggle"
         "$mainMod, m, exec, dms ipc call processlist focusortoggle"
         "$mainMod, comma, exec, dms ipc call settings focusortoggle"
         "$mainMod, n, exec, dms ipc call notifications toggle"
@@ -136,7 +142,8 @@
         "$mainMod, y, exec, dms ipc call dankdash wallpaper"
         "$mainMod SHIFT, Slash, exec, dms ipc call keybinds toggle hyprland"
         "$mainMod SHIFT, P, dpms, toggle"
-        "$mainMod SHIFT, C, exec, hyprctl dispatch togglefloating && hyprctl dispatch centerwindow"
+
+        # navigating workspaces
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
@@ -147,6 +154,8 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+
+        # moving windows between workspaces
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -158,23 +167,23 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        "$maiMod SHIFT, left, movewindow, l"
-        "$maiMod SHIFT, right, movewindow, r"
-        "$maiMod SHIFT, up, movewindow, u"
-        "$maiMod SHIFT, down, movewindow, d"
-        #       "$maiMod SHIFT, h, movewindow, l"
-        #       "$maiMod SHIFT, j, movewindow, d"
-        #       "$maiMod SHIFT, k, movewindow, u"
-        #       "$maiMod SHIFT, l, movewindow, r"
+        "$mainMod SHIFT, left, movewindow, l"
+        "$mainMod SHIFT, right, movewindow, r"
+        "$mainMod SHIFT, up, movewindow, u"
+        "$mainMod SHIFT, down, movewindow, d"
+        "$mainMod SHIFT, h, movewindow, l"
+        "$mainMod SHIFT, j, movewindow, d"
+        "$mainMod SHIFT, k, movewindow, u"
+        "$mainMod SHIFT, l, movewindow, r"
 
-        "$maiMod ALT, left, moveactive,  -80 0"
-        "$maiMod ALT, right, moveactive, 80 0"
-        "$maiMod ALT, up, moveactive, 0 -80"
-        "$maiMod ALT, down, moveactive, 0 80"
-        #       "$maiMod ALT, h, moveactive,  -80 0"
-        #       "$maiMod ALT, j, moveactive, 0 80"
-        #       "$maiMod ALT, k, moveactive, 0 -80"
-        #       "$maiMod ALT, l, moveactive, 80 0"
+        "$mainMod ALT, left, moveactive,  -80 0"
+        "$mainMod ALT, right, moveactive, 80 0"
+        "$mainMod ALT, up, moveactive, 0 -80"
+        "$mainMod ALT, down, moveactive, 0 80"
+        "$mainMod ALT, h, moveactive,  -80 0"
+        "$mainMod ALT, j, moveactive, 0 80"
+        "$mainMod ALT, k, moveactive, 0 -80"
+        "$mainMod ALT, l, moveactive, 80 0"
       ];
 
       bindm = [
