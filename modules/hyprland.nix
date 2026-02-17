@@ -284,7 +284,7 @@
         }
       }
 
-      gesture = 3, vertical, dispatcher, exec, "${pkgs.pyprland}/bin/pypr expose"
+      gesture = 3, vertical, dispatcher, exec, pypr expose
     '';
   };
 }
