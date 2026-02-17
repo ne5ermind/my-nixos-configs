@@ -207,6 +207,8 @@
 
       gesture = [
         "3, horizontal, workspace"
+        "3, up, dispatcher, exec, pypr feth_client_menu"
+        "3, down, dispatcher, exec, pypr unfetch_client"
         # "3, vertical, dispatcher, overview:toggle"
       ];
 
@@ -284,7 +286,7 @@
         }
       }
 
-      gesture = 3, vertical, dispatcher, exec, pypr expose
+      # gesture = 3, vertical, dispatcher, exec, pypr expose
     '';
   };
 }
