@@ -287,7 +287,8 @@
       }
 
       # gesture = 3, vertical, dispatcher, exec, pypr expose
-      gesture = 3, up, dispatcher, exec, pypr fetch_client_menu
+      gesture = 3, up, dispatcher, exec, fetch_client_menu
+      gesture = 3, down, dispatcher, exec, unfetch_client
     '';
   };
 }
