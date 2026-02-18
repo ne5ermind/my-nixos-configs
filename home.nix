@@ -353,13 +353,13 @@
         color0 #121212
         color8 #737373
 
-        #: red
-        color1 #ff0088
-        color9 #FD319E
+        #: red #ff0088 #FD319E
+        color1 #268aed
+        color9 #70b6fa
 
-        #: green
-        color2  #00ff77
-        color10 #FD319E
+        #: green #00ff77 #FD319E
+        color2  #b884e3
+        color10 #ca91fa
 
         #: yellow
         color3  #ffffff
