@@ -10,6 +10,10 @@
     inputs.dms.homeModules.dank-material-shell
     ./modules/nixvim.nix
     ./modules/hyprland.nix
+    ./modules/dms.nix
+    ./modules/fastfetch.nix
+    ./modules/cava.nix
+    ./modules/starship.nix
   ];
 
   home = {
@@ -56,165 +60,7 @@
   };
 
   programs = {
-    dank-material-shell.enable = true;
-
-    fastfetch = {
-      enable = true;
-      settings = {
-        logo = {
-          source = ./images/fastfetch-logo.png;
-          type = "kitty";
-          width = 18;
-          height = 8;
-          padding = {
-            top = 2;
-            left = 2;
-          };
-        };
-        display = {
-          separator = " ";
-        };
-        modules = [
-          {
-            type = "custom";
-            format = " ";
-          }
-          {
-            type = "custom";
-            format = "╭───────────╮";
-          }
-          {
-            type = "title";
-            key = "{#0}│ {#31} user    {#0}│";
-            format = "{1}";
-          }
-          {
-            type = "title";
-            key = "{#0}│ {#32}󰇅 hname   {#0}│";
-            format = "{2}";
-          }
-          {
-            type = "uptime";
-            key = "{#0}│ {#33}󰅐 uptime  {#0}│";
-          }
-          {
-            type = "os";
-            key = "{#0}│ {#34} distro  {#0}│";
-          }
-          {
-            type = "kernel";
-            key = "{#0}│ {#35} kernel  {#0}│";
-          }
-          {
-            type = "wm";
-            key = "{#0}│ {#36} wm      {#0}│";
-          }
-          {
-            type = "terminal";
-            key = "{#0}│ {#31} term    {#0}│";
-          }
-          {
-            type = "shell";
-            key = "{#0}│ {#32} shell   {#0}│";
-          }
-          {
-            type = "custom";
-            format = "├───────────┤";
-          }
-          {
-            type = "colors";
-            key = "{#0}│ {#39} colors  {#0}│";
-            symbol = "circle";
-          }
-          {
-            type = "custom";
-            format = "╰───────────╯";
-          }
-        ];
-      };
-    };
-
-    cava = {
-      enable = true;
-      settings = {
-        general.framerate = 120;
-        input.method = "pipewire";
-        color = {
-          gradient = 1;
-          gradient_count = 2;
-          gradient_color_1 = "'#4E5754'";
-          gradient_color_2 = "'#ffffff'";
-        };
-        smoothing.monstercat = 1;
-      };
-    };
-
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-      settings = {
-        format = ''
-          [$directory]($style)
-          $character'';
-
-        right_format = "$git_branch$git_metrics$git_status$cmd_duration";
-
-        directory = {
-          style = "bold blue";
-          #         truncation_length = 3;
-          #         truncation_symbol = "…/";
-          repo_root_style = "bold bright-blue";
-          format = "[$path]($style)[$read_only]($read_only_style) ";
-        };
-
-        character = {
-          success_symbol = "[❯](bold magenta)";
-          error_symbol = "[❯](bold red)";
-          vimcmd_symbol = "[❮](bold green)";
-        };
-
-        git_branch = {
-          symbol = "△ ";
-          style = "italic bright-blue";
-          format = "[$symbol$branch]($style) ";
-        };
-
-        git_metrics = {
-          disabled = false;
-          added_style = "bold green";
-          deleted_style = "bold red";
-          format = "([+$added]($added_style) )([-$deleted]($deleted_style) )";
-        };
-
-        git_status = {
-          style = "bold red";
-          format = "([⎪$all_status$ahead_behind⎥]($style) )";
-          conflicted = "◪◦";
-          ahead = "▴";
-          behind = "▿";
-          diverged = "◇";
-          untracked = "◌◦";
-          stashed = "◃◈";
-          modified = "●◦";
-          staged = "▪️";
-          renamed = "◎◦";
-          deleted = "✕";
-        };
-
-        cmd_duration = {
-          min_time = 500;
-          format = " [◄ $duration](italic white)";
-        };
-
-        add_newline = true;
-
-        nix_shell = {
-          symbol = "❄️ ";
-          format = "via [$symbol$state]($style) ";
-          style = "bold blue";
-        };
-      };
-    };
+    # dank-material-shell.enable = true;
 
     zsh = {
       enable = true;
@@ -450,5 +296,4 @@
       include_special = false
     '';
   };
-
 }
