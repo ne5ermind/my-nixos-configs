@@ -324,7 +324,7 @@
 
         #: Cursor colors
 
-        cursor              #ff0088
+        cursor              #268aed
         cursor_text_color   background
 
 
