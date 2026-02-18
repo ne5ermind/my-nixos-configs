@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       logo = {
-        source = ./images/fastfetch-logo.png;
+        source = ../images/fastfetch-logo.png;
         type = "kitty";
         width = 18;
         height = 8;
