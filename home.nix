@@ -334,7 +334,7 @@
 
         #: kitty window border colors and terminal bell colors
 
-        active_border_color     #ff0088
+        active_border_color     #268aed
         inactive_border_color   #323232
         bell_border_color       #ff0088
 
