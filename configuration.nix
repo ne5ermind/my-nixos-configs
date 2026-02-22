@@ -56,18 +56,12 @@
   environment = {
     systemPackages = with pkgs; [
       wget
-      waybar
       kitty
       git
       v2ray-geoip
       v2ray-domain-list-community
-      grim
       papirus-icon-theme
       kdePackages.qt6ct
-      zfxtop
-      (discord.override {
-        withVencord = true;
-      })
     ];
 
     variables = {
