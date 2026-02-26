@@ -62,7 +62,6 @@
       v2ray-domain-list-community
       papirus-icon-theme
       kdePackages.qt6ct
-      winboat
     ];
 
     variables = {
