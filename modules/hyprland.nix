@@ -123,6 +123,11 @@
         "$mainMod, J, togglesplit,"
         "$mainMod SHIFT, V, exec, hyprctl dispatch centerwindow"
 
+        # switching layouts
+        "$mainMod, M, exec, hyprctl keyword general:layout master"
+        "$mainMod, D, exec, hyprctl keyword general:layout dwindle"
+        "$mainMod, S, exec, hyprctl keyword general:layout scrolling"
+
         # move focus
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
@@ -133,8 +138,8 @@
         "$mainMod, k, movefocus, u"
         "$mainMod, j, movefocus, d"
 
-        "$mainMod, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
+        "$mainMod, M, togglespecialworkspace, magic"
+        "$mainMod SHIFT, M, movetoworkspace, special:magic"
 
         # dms controls
         "$mainMod, space, exec, dms ipc call spotlight toggle"
@@ -298,7 +303,6 @@
       }
 
       workspace = special:exposed,gapsout:60,gapsin:30,bordersize:2,border:true,shadow:false
-      # gesture = 3, vertical, dispatcher, exec, pypr expose
     '';
   };
 }
