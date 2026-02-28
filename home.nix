@@ -50,9 +50,9 @@
         _7zz = _7zz-rar;
       })
       (pkgs.callPackage inputs.spotatui { })
-      (discord.override {
-        withVencord = true;
-      })
+      #     (discord.override {
+      #       withVencord = true;
+      #     })
     ];
 
     pointerCursor = {
