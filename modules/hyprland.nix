@@ -89,7 +89,7 @@
       };
 
       scrolling = {
-        column_width = 0.8;
+        column_width = 0.85;
       };
 
       input = {
@@ -197,6 +197,12 @@
         "$mainMod ALT, j, moveactive, 0 80"
         "$mainMod ALT, k, moveactive, 0 -80"
         "$mainMod ALT, l, moveactive, 80 0"
+
+        # scrolling layout
+        "$mainMod, F, togglefit"
+        "$mainMod SHIFT, F, fit, visible"
+        "$mainMod ALT, h, swapcol, l"
+        "$mainMod ALT, l, swapcol, r"
       ];
 
       bindm = [
