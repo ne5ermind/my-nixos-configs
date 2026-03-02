@@ -200,9 +200,9 @@
 
         # scrolling layout
         "$mainMod, F, layoutmsg, togglefit"
-        "$mainMod SHIFT, F, layoutmsg, fit, visible"
-        "$mainMod ALT, h, layoutmsg, swapcol, l"
-        "$mainMod ALT, l, layoutmsg, swapcol, r"
+        "$mainMod SHIFT, F, layoutmsg, fit visible"
+        "$mainMod ALT, h, layoutmsg, swapcol l"
+        "$mainMod ALT, l, layoutmsg, swapcol r"
       ];
 
       bindm = [
