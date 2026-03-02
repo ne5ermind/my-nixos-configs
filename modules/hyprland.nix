@@ -90,7 +90,7 @@
 
       scrolling = {
         column_width = 0.8;
-        follow_fit_method = 0;
+        focus_fit_method = 0;
         fullscreen_on_one_column = false;
         follow_min_visible = 0.7;
       };
