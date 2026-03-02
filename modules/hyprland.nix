@@ -302,8 +302,10 @@
         }
       }
 
+      scrolling.column_width = 0.8
+
       workspace = special:exposed,gapsout:60,gapsin:30,bordersize:2,border:true,shadow:false
-      workspace = 1, layout:scrolling, layoutopt:column_width:0.8
+      workspace = 1, layout:scrolling
     '';
   };
 }
