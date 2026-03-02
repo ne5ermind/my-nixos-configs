@@ -169,7 +169,7 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.fira-code
       nerd-fonts.symbols-only
-      noto-fonts-color-emoji
+      # noto-fonts-color-emoji
     ];
 
     fontconfig.defaultFonts.emoji = [ "Noto Color Emoji" ];
