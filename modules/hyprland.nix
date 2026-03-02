@@ -201,8 +201,8 @@
         # scrolling layout
         "$mainMod SHIFT, h, layoutmsg, swapcol l"
         "$mainMod SHIFT, l, layoutmsg, swapcol r"
-        "$mainMod ALT, +, layoutmsg, colresize +100"
-        "$mainMod ALT, -, layoutmsg, colresize -100"
+        "$mainMod, +, layoutmsg, colresize +0.1"
+        "$mainMod, -, layoutmsg, colresize -0.1"
       ];
 
       bindm = [
