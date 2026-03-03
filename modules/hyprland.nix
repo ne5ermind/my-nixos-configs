@@ -317,6 +317,9 @@
 
       workspace = special:exposed,gapsout:60,gapsin:30,bordersize:2,border:true,shadow:false
       workspace = 1, layout:scrolling
+      workspace = 2, layout:scrolling
+      workspace = 9, layout:scrolling, layoutopt:direction:up
+      workspace = 10, layout:master
     '';
   };
 }
