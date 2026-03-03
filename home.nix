@@ -35,24 +35,21 @@
       neo
       cava
       inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
-      # wpsoffice-cn
-      # libreoffice-qt
+      libreoffice-qt
       hunspell
       hunspellDicts.uk_UA
       hunspellDicts.th_TH
       dbeaver-bin
       v2raya
       geeqie
-      termius
-      unzip
       pyprland
       (yazi.override {
         _7zz = _7zz-rar;
       })
       (pkgs.callPackage inputs.spotatui { })
-      #     (discord.override {
-      #       withVencord = true;
-      #     })
+      (discord.override {
+        withVencord = true;
+      })
     ];
 
     pointerCursor = {
