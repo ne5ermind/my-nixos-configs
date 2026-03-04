@@ -35,7 +35,7 @@
       neo
       cava
       inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
-      libreoffice-qt
+      # libreoffice-qt
       hunspell
       hunspellDicts.uk_UA
       hunspellDicts.th_TH
