@@ -275,8 +275,8 @@
           bar_color = rgba(1a1a1aaa)
 
           hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
-          hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
-          hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch fullscreen 1
+          hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
+          hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch fullscreen 1
 
           bar_title_enabled = true
           bar_part_of_window = true
