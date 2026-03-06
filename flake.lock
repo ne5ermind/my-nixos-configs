@@ -139,11 +139,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772380461,
-        "narHash": "sha256-O3ukj3Bb3V0Tiy/4LUfLlBpWypJ9P0JeUgsKl2nmZZY=",
+        "lastModified": 1772807318,
+        "narHash": "sha256-Qjw6ILt8cb2HQQpCmWNLMZZ63wEo1KjTQt+1BcQBr7k=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f140aa04d7d14f8a50ab27f3691b5766b17ae961",
+        "rev": "daa2c221320809f5514edde74d0ad0193ad54ed8",
         "type": "github"
       },
       "original": {
@@ -248,11 +248,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1772402112,
-        "narHash": "sha256-VJnMww74ShrxwPshDXAFq7lx7Kg/Cf8Qw5PRSze47EE=",
+        "lastModified": 1772723663,
+        "narHash": "sha256-OKaOxpeK42A0QdlUkl68/4l32EZzQRHjKzBHXI3Q2a8=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "5c370c3333aa6648c014a550c8b64f7f90c3f777",
+        "rev": "ae9ca17b40e04cd11b53b82e9292d3070710df18",
         "type": "github"
       },
       "original": {
@@ -576,11 +576,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1772198003,
-        "narHash": "sha256-I45esRSssFtJ8p/gLHUZ1OUaaTaVLluNkABkk6arQwE=",
+        "lastModified": 1772624091,
+        "narHash": "sha256-QKyJ0QGWBn6r0invrMAK8dmJoBYWoOWy7lN+UHzW1jc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "dd9b079222d43e1943b6ebd802f04fd959dc8e61",
+        "rev": "80bdc1e5ce51f56b19791b52b2901187931f5353",
         "type": "github"
       },
       "original": {
@@ -695,11 +695,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1772392844,
-        "narHash": "sha256-jG6LoavnG1iVPXo9EGrvZoP4cgcXnsXXSydC6wKPihY=",
+        "lastModified": 1772494187,
+        "narHash": "sha256-6ksgNAFXVK+Cg/6ww7bB2nJUPZlnS75UwZC7G+L03EE=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "74d7bb896e98cc3e87e7d0064a968f196fccaa90",
+        "rev": "915ab06b046d05613041780c575c62a32fe67cea",
         "type": "github"
       },
       "original": {
@@ -711,11 +711,11 @@
     "spotatui": {
       "flake": false,
       "locked": {
-        "lastModified": 1772298601,
-        "narHash": "sha256-NSMG4yiGEctTjEp+14IF5sWu0VukjAejcGpY5xJ+Wtg=",
+        "lastModified": 1772804582,
+        "narHash": "sha256-FRmKkrxMyLmSb1rq7+lFxJ1TqvV5CuI7ZX2PQChWESI=",
         "owner": "LargeModGames",
         "repo": "spotatui",
-        "rev": "8920b440b50c69b696d3e925ff434dae11abbb86",
+        "rev": "1c21a4bba644d89bd831e901cc73b01b16dd3ada",
         "type": "github"
       },
       "original": {
@@ -834,11 +834,11 @@
         "zapret-flowseal": "zapret-flowseal"
       },
       "locked": {
-        "lastModified": 1772404667,
-        "narHash": "sha256-33u85LzW+rmsqArHxtp9FUx0o7WDAZyaklsXuEJgZpY=",
+        "lastModified": 1772714518,
+        "narHash": "sha256-75tmW2A4Yka30ru/kFqJEM1pEwmJFq3OmNLoX8Jvk4g=",
         "owner": "kartavkun",
         "repo": "zapret-discord-youtube",
-        "rev": "a84c40510fb789c545db45826fadfd26e551dbe7",
+        "rev": "a17b6319483f0aa041a996dbd69c019b02b0c3f8",
         "type": "github"
       },
       "original": {
@@ -850,11 +850,11 @@
     "zapret-flowseal": {
       "flake": false,
       "locked": {
-        "lastModified": 1772123888,
-        "narHash": "sha256-pGxkIP9FBwwKPSeAl7JKJ/iIErRnPFtUDdF0KAEUdzU=",
+        "lastModified": 1772644109,
+        "narHash": "sha256-k81WLuDrvG3zjVf3wVgnUTrpomJbuipGJv3TGX7suqc=",
         "owner": "Flowseal",
         "repo": "zapret-discord-youtube",
-        "rev": "cb9aed09449e1c51a9108c7989717c7c98a14301",
+        "rev": "9a1ce92593bd9af4e2e0b4af4d9db69c71e4af00",
         "type": "github"
       },
       "original": {
@@ -870,11 +870,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772340029,
-        "narHash": "sha256-4KmL71wCRrkooDKEClMrKgG0QBAcBYYPnFNltYXyhYg=",
+        "lastModified": 1772685307,
+        "narHash": "sha256-5xthZHeqwBeXNhnRIlxnCuaZLky0SZ6vQsxtd+eqhTU=",
         "owner": "youwen5",
         "repo": "zen-browser-flake",
-        "rev": "0ffb3ae574f1048ecfce7e3ffc25693f8cd7ee91",
+        "rev": "dc92d88524ee83308795bc90f6a9f1d965265aaa",
         "type": "github"
       },
       "original": {
