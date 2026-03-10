@@ -229,13 +229,6 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      windowrule = [
-        #       "float, class:^(firefox)$, title:^(Picture-in-Picture)$"
-        #       "float, class:^(zoom)$"
-        #       "float, class:^(org.quickshell)$"
-        #       "opacity 0.9 0.9, floating:0, focus:0"
-      ];
-
       gesture = [
         "3, horizontal, workspace"
         "3, vertical, dispatcher, exec, pypr expose"
@@ -250,16 +243,6 @@
         "kitty zsh -c 'fastfetch; exec zsh'"
         "${pkgs.pyprland}/bin/pypr"
       ];
-
-      #     plugin = {
-      #       overview = {
-      #         innerGap = 5;
-      #         outerGap = 5;
-      #         panelHeight = 150;
-      #         exitOnSwitch = true;
-      #         drawActiveWorkspace = true;
-      #       };
-      #     };
     };
 
     plugins = [
