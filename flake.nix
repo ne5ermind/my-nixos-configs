@@ -69,7 +69,7 @@
         version = "2.5.2";
         src = pkgs.fetchurl {
           url = "https://github.com/Happ-proxy/happ-desktop/releases/download/2.5.2/Happ.linux.x64.deb";
-          sha256 = "sha256:1mzz6naj7463qf71i1h93x2hzl2a5whypd0d2yni5jlvrsqa043z";
+          hash = "";
         };
         nativeBuildInputs = with pkgs; [
           dpkg
@@ -83,10 +83,6 @@
           gtk3
           libayatana-appindicator
           libsecret
-          at-spi2-atk
-          nss
-          nspr
-          mesa
         ];
         unpackPhase = "dpkg-deb -x $src .";
         installPhase = ''
