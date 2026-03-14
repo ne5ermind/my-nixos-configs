@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  happ-proxy,
   ...
 }:
 
@@ -43,7 +44,7 @@
       v2raya
       geeqie
       pyprland
-      flclash
+      happ-proxy
       (yazi.override {
         _7zz = _7zz-rar;
       })

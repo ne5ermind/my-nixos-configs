@@ -5,6 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     #nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,10 +55,48 @@
     {
       nixpkgs,
       home-manager,
+      flake-utils,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+      hpap-proxy = pkgs.stdenv.mkDerivation rec {
+        pname = "happ";
+        version = "2.5.2";
+        src = pkgs.fetchurl {
+          url = "https://github.com/Happ-proxy/happ-desktop/releases/download/2.5.2/Happ.linux.arm64.deb";
+          sha256 = "08pkl38phxg0sdxy148cp4bc6gm614qs4ckc37b0x7xdpilpra8r";
+        };
+        nativeBuildInputs = with pkgs; [
+          dpkg
+          autoPatchelfHook
+          makeWrapper
+        ];
+        buildInputs = with pkgs; [
+          glibc
+          gcc-unwrapped
+          webkitgtk
+          gtk3
+          libayatana-appindicator
+          libsecret
+        ];
+        unpackPhase = "dpkg-deb -x $src .";
+        installPhase = ''
+          mkdir -p $out/bin $out/share
+          cp -r usr/bin/* $out/bin/
+          cp -r usr/share/* $out/share/
+        '';
+      };
+    in
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs Happ-proxy; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
