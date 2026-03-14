@@ -90,15 +90,31 @@
         ];
         unpackPhase = "dpkg-deb -x $src .";
         installPhase = ''
-          mkdir -p $out/bin $out/share
-          cp -r usr/share/* $out/share/ || true
-          cp -r opt $out/ || true
-          if [ -f "$out/opt/Happ/happ" ]; then
-              ln -s $out/opt/Happ/happ $out/bin/happ
-          elif [ -f "$out/usr/bin/happ" ]; then
-              cp usr/bin/happ $out/bin/happ
+          mkdir -p $out/bin $out/lib $out/share
+
+          # Copy the application files (usually in opt or usr)
+          cp -r . $out/opt-raw 2>/dev/null || true
+
+          # Locate the actual 'happ' binary anywhere in the unpacked source
+          BINARY_PATH=$(find . -type f -executable -name "happ" | head -n 1)
+
+          if [ -n "$BINARY_PATH" ]; then
+            # Copy the actual binary to the store bin
+            cp "$BINARY_PATH" $out/bin/happ
+            chmod +x $out/bin/happ
+          else
+            echo "Error: Binary 'happ' not found in deb!"
+            find . -maxdepth 4
+            exit 1
           fi
-          chmod +x $out/bin/happ
+
+          # Copy desktop files so it shows up in your app launcher
+          if [ -d usr/share/applications ]; then
+            cp -r usr/share/applications $out/share/
+            substituteInPlace $out/share/applications/*.desktop \
+              --replace "/usr/bin/happ" "$out/bin/happ" \
+              --replace "Exec=happ" "Exec=$out/bin/happ"
+          fi
         '';
       };
     in
