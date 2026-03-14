@@ -68,8 +68,8 @@
         pname = "happ";
         version = "2.5.2";
         src = pkgs.fetchurl {
-          url = "https://github.com/Happ-proxy/happ-desktop/releases/download/2.5.2/Happ.linux.arm64.deb";
-          sha256 = "08pkl38phxg0sdxy148cp4bc6gm614qs4ckc37b0x7xdpilpra8r";
+          url = "https://github.com/Happ-proxy/happ-desktop/releases/download/2.5.2/Happ.linux.x64.deb";
+          sha256 = "1mzz6naj7463qf71i1h93x2hzl2a5whypd0d2yni5jlvrsqa043z";
         };
         nativeBuildInputs = with pkgs; [
           dpkg
