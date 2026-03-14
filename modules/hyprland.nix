@@ -273,22 +273,23 @@
           bar_text_size = 11
         }
 
-      ynamic-cursors {
-       enabled = true
-       mode = shake
+        dynamic-cursors {
+          enabled = true
+          mode = shake
 
-       shake {
-         enabled = true
-         nearest = true
-         threshold = 6.0
-         base = 4.0
-         speed = 4.0
-         influence = 0.0
-         limit = 0.0
-         timeout = 1000
-         effects = false
-         ipc = false
-       }
+          shake {
+            enabled = true
+            nearest = true
+            threshold = 6.0
+            base = 4.0
+            speed = 4.0
+            influence = 0.0
+            limit = 0.0
+            timeout = 1000
+            effects = false
+            ipc = false
+          }
+        }
 
 
         overview {
