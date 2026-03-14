@@ -79,18 +79,14 @@
         buildInputs = with pkgs; [
           glibc
           gcc-unwrapped
-          # webkitgtk_4_1
-          # gtk3
-          # libayatana-appindicator
-          # libsecret
         ];
         unpackPhase = "dpkg-deb -x $src .";
         installPhase = ''
-                    mkdir -p $out
-                    cp -r usr/* $out/
-          #         mkdir -p $out/bin $out/share
-          #         cp -r usr/bin/* $out/bin/
-          #         cp -r usr/share/* $out/share/
+          mkdir -p $out
+          cp -r usr/* $out/
+
+          substituteInPlace $out/share/applications/*.desktop \
+            --replace "Exec=/usr/bin/your-app-binary" "Exec=$out/bin/your-app-binary"
         '';
       };
     in
