@@ -79,7 +79,7 @@
         buildInputs = with pkgs; [
           glibc
           gcc-unwrapped
-          webkitgtk
+          webkitgtk_4_1
           gtk3
           libayatana-appindicator
           libsecret
