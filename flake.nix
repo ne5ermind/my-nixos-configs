@@ -65,7 +65,7 @@
         config.allowUnfree = true;
       };
 
-      hpap-proxy = pkgs.stdenv.mkDerivation rec {
+      happ-proxy = pkgs.stdenv.mkDerivation rec {
         pname = "happ";
         version = "2.5.2";
         src = pkgs.fetchurl {
@@ -96,7 +96,7 @@
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs Happ-proxy; };
+        specialArgs = { inherit inputs happ-proxy; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
