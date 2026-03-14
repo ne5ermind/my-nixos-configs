@@ -89,6 +89,8 @@
           mkdir -p $out/bin $out/share
           cp -r usr/bin/* $out/bin/
           cp -r usr/share/* $out/share/
+
+          chmod +x $out/bin/*
         '';
       };
     in
