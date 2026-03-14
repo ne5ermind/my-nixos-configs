@@ -55,7 +55,6 @@
     {
       nixpkgs,
       home-manager,
-      flake-utils,
       ...
     }@inputs:
     let
@@ -107,7 +106,7 @@
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
               extraSpecialArgs = {
-                inherit inputs;
+                inherit inputs happ-proxy;
               };
             };
           }
