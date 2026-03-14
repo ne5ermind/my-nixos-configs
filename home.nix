@@ -43,10 +43,10 @@
       v2raya
       geeqie
       pyprland
+      flclash
       (yazi.override {
         _7zz = _7zz-rar;
       })
-      (pkgs.callPackage inputs.spotatui { })
       (discord.override {
         withVencord = true;
       })
