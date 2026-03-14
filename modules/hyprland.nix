@@ -241,7 +241,7 @@
       exec-once = [
         "dms run"
         "kitty zsh -c 'fastfetch; exec zsh'"
-        # "${pkgs.pyprland}/bin/pypr"
+        "${pkgs.pyprland}/bin/pypr"
       ];
     };
 
