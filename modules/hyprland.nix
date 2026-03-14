@@ -246,63 +246,63 @@
     };
 
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+      # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
       # inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
       # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
     ];
 
     extraConfig = ''
-            plugin {
-              hyprbars {
-                bar_height = 27
-                bar_color = rgba(1a1a1aaa)
+      #           plugin {
+      #             hyprbars {
+      #               bar_height = 27
+      #               bar_color = rgba(1a1a1aaa)
 
-                hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
-                hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
-                hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch fullscreen 1
+      #               hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
+      #               hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
+      #               hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch fullscreen 1
 
-                bar_title_enabled = true
-                bar_part_of_window = true
-                bar_precedence_over_border = true
-                bar_buttons_alignment = left
-                bar_button_padding = 10
-                bar_padding = 20
+      #               bar_title_enabled = true
+      #               bar_part_of_window = true
+      #               bar_precedence_over_border = true
+      #               bar_buttons_alignment = left
+      #               bar_button_padding = 10
+      #               bar_padding = 20
 
-                col.text = rgb(ffffff)
-                bar_text_font = JetBrainsMono Nerd Font
-                bar_text_size = 11
-              }
+      #               col.text = rgb(ffffff)
+      #               bar_text_font = JetBrainsMono Nerd Font
+      #               bar_text_size = 11
+      #             }
 
-      #       dynamic-cursors {
-      #         enabled = true
-      #         mode = shake
+      #          dynamic-cursors {
+      #            enabled = true
+      #            mode = shake
 
-      #         shake {
-      #           enabled = true
-      #           nearest = true
-      #           threshold = 6.0
-      #           base = 4.0
-      #           speed = 4.0
-      #           influence = 0.0
-      #           limit = 0.0
-      #           timeout = 1000
-      #           effects = false
-      #           ipc = false
-      #         }
-      #       }
+      #            shake {
+      #              enabled = true
+      #              nearest = true
+      #              threshold = 6.0
+      #              base = 4.0
+      #              speed = 4.0
+      #              influence = 0.0
+      #              limit = 0.0
+      #              timeout = 1000
+      #              effects = false
+      #              ipc = false
+      #            }
+      #          }
 
-              overview {
-                panelHeight = 150
-                panelBorderWidth = 2
-                workspaceMargin = 5
-              }
-            }
+      #             overview {
+      #               panelHeight = 150
+      #               panelBorderWidth = 2
+      #               workspaceMargin = 5
+      #             }
+      #           }
 
-            workspace = special:exposed,gapsout:60,gapsin:30,bordersize:2,border:true,shadow:false
-            workspace = 1, layout:scrolling
-            workspace = 2, layout:scrolling
-            workspace = 9, layout:scrolling, layoutopt:direction:up
-            workspace = 10, layout:master
+                  workspace = special:exposed,gapsout:60,gapsin:30,bordersize:2,border:true,shadow:false
+                  workspace = 1, layout:scrolling
+                  workspace = 2, layout:scrolling
+                  workspace = 9, layout:scrolling, layoutopt:direction:up
+                  workspace = 10, layout:master
     '';
   };
 }
