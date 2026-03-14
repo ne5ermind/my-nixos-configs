@@ -245,11 +245,11 @@
       ];
     };
 
-    plugins = [
-      # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      # inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
-      # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
-    ];
+    #   plugins = [
+    #     inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+    #     inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
+    #     inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+    #   ];
 
     extraConfig = ''
       plugin {
