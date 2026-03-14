@@ -83,14 +83,22 @@
           gtk3
           libayatana-appindicator
           libsecret
+          at-spi2-atk
+          nss
+          nspr
+          mesa
         ];
         unpackPhase = "dpkg-deb -x $src .";
         installPhase = ''
           mkdir -p $out/bin $out/share
-          cp -r usr/bin/* $out/bin/
-          cp -r usr/share/* $out/share/
-
-          chmod +x $out/bin/*
+          cp -r usr/share/* $out/share/ || true
+          cp -r opt $out/ || true
+          if [ -f "$out/opt/Happ/happ" ]; then
+              ln -s $out/opt/Happ/happ $out/bin/happ
+          elif [ -f "$out/usr/bin/happ" ]; then
+              cp usr/bin/happ $out/bin/happ
+          fi
+          chmod +x $out/bin/happ
         '';
       };
     in
