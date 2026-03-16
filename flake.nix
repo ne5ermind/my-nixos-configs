@@ -66,7 +66,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              specialArgs = { inherit inputs; };
+              extraSpecialArgs = { inherit inputs; };
 
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
