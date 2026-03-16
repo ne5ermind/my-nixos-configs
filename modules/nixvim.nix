@@ -373,6 +373,15 @@
         };
       };
 
+      overseer = {
+        enable = true;
+
+        settings = {
+          templates = [ "builtin" ];
+          strategy = "terminal";
+        };
+      };
+
       alpha = {
         enable = false;
         theme = "dashboard";
@@ -786,6 +795,18 @@
         key = "<leader>u";
         action = "<cmd>UndotreeToggle<cr>";
         options.desc = "Toggle undo tree";
+      }
+      {
+        mode = "n";
+        key = "<leader>or";
+        action = "<cmd>OverseerRun<cr>";
+        options.desc = "run task";
+      }
+      {
+        mode = "n";
+        key = "<leader>or";
+        action = "<cmd>OverseerToggle<cr>";
+        options.desc = "toggle overseer";
       }
 
     ];
