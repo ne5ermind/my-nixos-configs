@@ -103,9 +103,7 @@
               useUserPackages = true;
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
-              #             extraSpecialArgs = {
-              #               inherit inputs happ-proxy;
-              #             };
+
             };
           }
         ];
