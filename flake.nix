@@ -57,42 +57,8 @@
       home-manager,
       ...
     }@inputs:
-    let
-      system = "x86_64-linux";
-      #     pkgs = import nixpkgs {
-      #       inherit system;
-      #       config.allowUnfree = true;
-      #     };
-
-      #     happ-proxy = pkgs.stdenv.mkDerivation rec {
-      #       pname = "happ";
-      #       version = "2.5.2";
-      #       src = pkgs.fetchurl {
-      #         url = "https://github.com/Happ-proxy/happ-desktop/releases/download/2.5.2/Happ.linux.x64.deb";
-      #         hash = "sha256-fxCgsM6byhKtFw206yEvStAPRR8JhhiOw8OQI5U1/9c=";
-      #       };
-      #       nativeBuildInputs = with pkgs; [
-      #         dpkg
-      #         autoPatchelfHook
-      #         # makeWrapper
-      #       ];
-      #       buildInputs = with pkgs; [
-      #         glibc
-      #         gcc-unwrapped
-      #       ];
-      #       unpackPhase = "dpkg-deb -x $src .";
-      #       installPhase = ''
-      #         mkdir -p $out
-      #         cp -r usr/* $out/
-
-      #         substituteInPlace $out/share/applications/*.desktop \
-      #           --replace "Exec=/usr/bin/your-app-binary" "Exec=$out/bin/your-app-binary"
-      #       '';
-      #     };
-    in
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
-        inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
@@ -103,7 +69,6 @@
               useUserPackages = true;
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
-
             };
           }
         ];
