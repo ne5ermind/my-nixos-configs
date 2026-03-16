@@ -66,10 +66,6 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              sharedModules = [
-                inputs.spicetify-nix.homeManagerModules.default
-                inputs.dms.homeModules.dank-material-shell
-              ];
               specialArgs = { inherit inputs; };
 
               users.never = import ./home.nix;
