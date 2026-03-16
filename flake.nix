@@ -59,7 +59,6 @@
     }@inputs:
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
@@ -71,6 +70,7 @@
                 inputs.spicetify-nix.homeManagerModules.default
                 inputs.dms.homeModules.dank-material-shell
               ];
+              specialArgs = { inherit inputs; };
 
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
