@@ -6,8 +6,8 @@
 
 {
   imports = [
-    inputs.spicetify-nix.homeManagerModules.default
-    inputs.dms.homeModules.dank-material-shell
+    #   inputs.spicetify-nix.homeManagerModules.default
+    #   inputs.dms.homeModules.dank-material-shell
     ./modules/nixvim.nix
     ./modules/hyprland.nix
     ./modules/dms.nix

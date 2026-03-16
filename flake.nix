@@ -67,6 +67,11 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              sharedModules = [
+                inputs.spicetify-nix.homeManagerModules.default
+                inputs.dms.homeModules.dank-material-shell
+              ];
+
               users.never = import ./home.nix;
               backupFileExtension = "hm-bak";
             };
