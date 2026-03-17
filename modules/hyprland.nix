@@ -103,6 +103,7 @@
         touchpad = {
           natural_scroll = false;
           disable_while_typing = true;
+          accel_profile = "flat";
         };
       };
 
