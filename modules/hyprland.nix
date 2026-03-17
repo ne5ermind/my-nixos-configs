@@ -115,7 +115,7 @@
         }
         {
           name = "ftcs0038:00-2808:0106-touchpad";
-          sensitivity = 0.5;
+          sensitivity = 0.8;
         }
       ];
 
