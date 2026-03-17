@@ -111,6 +111,10 @@
           name = "epic-mouse-v1";
           sensitivity = -0.5;
         }
+        {
+          name = "ftcs0038:00-2808:0106-touchpad";
+          sensitivity = 0.5;
+        }
       ];
 
       misc = {
