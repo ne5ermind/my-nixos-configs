@@ -99,9 +99,7 @@
         kb_layout = "us,ru";
         kb_options = "grp:alt_shift_toggle,caps:escape";
         follow_mouse = 1;
-        sensitivity = -0.3;
-        accel_profile = "flat";
-        force_no_accel = true;
+        # accel_profile = "flat";
         touchpad = {
           natural_scroll = false;
           disable_while_typing = true;
@@ -115,7 +113,7 @@
         }
         {
           name = "ftcs0038:00-2808:0106-touchpad";
-          sensitivity = 0;
+          sensitivity = 0.2;
         }
       ];
 
