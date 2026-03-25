@@ -249,50 +249,50 @@
     };
 
     plugins = [
-      # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      # inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+      inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
       # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
     ];
 
     extraConfig = ''
       plugin {
-       #hyprbars {
-       #  bar_height = 27
-       #  bar_color = rgba(1a1a1aaa)
+       hyprbars {
+         bar_height = 27
+         bar_color = rgba(1a1a1aaa)
 
-       #  hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
-       #  hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
-       #  hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch fullscreen 1
+         hyprbars-button = rgb(ff4040), 13, 󰧞, hyprctl dispatch killactive
+         hyprbars-button = rgb(eeee11), 13, 󰧞, hyprctl dispatch movetoworkspacesilent special:minimized
+         hyprbars-button = rgb(00ff00), 13, 󰧞, hyprctl dispatch fullscreen 1
 
-       #  bar_title_enabled = true
-       #  bar_part_of_window = true
-       #  bar_precedence_over_border = true
-       #  bar_buttons_alignment = left
-       #  bar_button_padding = 10
-       #  bar_padding = 20
+         bar_title_enabled = true
+         bar_part_of_window = true
+         bar_precedence_over_border = true
+         bar_buttons_alignment = left
+         bar_button_padding = 10
+         bar_padding = 20
 
-       #  col.text = rgb(ffffff)
-       #  bar_text_font = JetBrainsMono Nerd Font
-       #  bar_text_size = 11
-       #}
+         col.text = rgb(ffffff)
+         bar_text_font = JetBrainsMono Nerd Font
+         bar_text_size = 11
+       }
 
-       #dynamic-cursors {
-       #  enabled = true
-       #  mode = shake
+       dynamic-cursors {
+         enabled = true
+         mode = shake
 
-       #  shake {
-       #    enabled = true
-       #    nearest = true
-       #    threshold = 6.0
-       #    base = 4.0
-       #    speed = 4.0
-       #    influence = 0.0
-       #    limit = 0.0
-       #    timeout = 1000
-       #    effects = false
-       #    ipc = false
-       #  }
-       #}
+         shake {
+           enabled = true
+           nearest = true
+           threshold = 6.0
+           base = 4.0
+           speed = 4.0
+           influence = 0.0
+           limit = 0.0
+           timeout = 1000
+           effects = false
+           ipc = false
+         }
+       }
 
 
         overview {
