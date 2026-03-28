@@ -43,7 +43,7 @@
       v2raya
       geeqie
       pyprland
-      chromedriver
+      google-chrome
       (yazi.override {
         _7zz = _7zz-rar;
       })
