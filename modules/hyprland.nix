@@ -250,7 +250,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-      inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
+      # inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
       # inputs.hyprspace.packages.${pkgs.system}.Hyprspace
     ];
 
@@ -276,23 +276,23 @@
          bar_text_size = 11
        }
 
-       dynamic-cursors {
-         enabled = true
-         mode = shake
+      #dynamic-cursors {
+      #  enabled = true
+      #  mode = shake
 
-         shake {
-           enabled = true
-           nearest = true
-           threshold = 6.0
-           base = 4.0
-           speed = 4.0
-           influence = 0.0
-           limit = 0.0
-           timeout = 1000
-           effects = false
-           ipc = false
-         }
-       }
+      #  shake {
+      #    enabled = true
+      #    nearest = true
+      #    threshold = 6.0
+      #    base = 4.0
+      #    speed = 4.0
+      #    influence = 0.0
+      #    limit = 0.0
+      #    timeout = 1000
+      #    effects = false
+      #    ipc = false
+      #  }
+      #}
 
 
         overview {
