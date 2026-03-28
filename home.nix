@@ -44,6 +44,7 @@
       geeqie
       pyprland
       google-chrome
+      chromedriver
       (yazi.override {
         _7zz = _7zz-rar;
       })
