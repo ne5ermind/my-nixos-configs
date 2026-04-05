@@ -117,6 +117,17 @@
       jack.enable = true;
     };
 
+    printing = {
+      enable = true;
+      drivers = with pkgs; [ gutenprint hplip splix ];
+    };
+
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+
     udev.extraRules = ''
       ACTION=="add|change", SUBSYSTEM=="input", ATTRS{id/vendor}=="2808", ATTRS{id/product}=="0106", ENV{ID_INPUT_MOUSE}="0", ENV{ID_INPUT_TOUCHPAD}="1"
     '';
@@ -125,7 +136,10 @@
   networking = {
     hostName = "nevernix";
     networkmanager.enable = true;
-    firewall.enable = false;
+    firewall = {
+      enable = false;
+      allowedTCPPorts = [ 631 ];
+      allowedUDPPorts = [ 631 ];
   };
 
   virtualisation.docker = {
