@@ -119,7 +119,11 @@
 
     printing = {
       enable = true;
-      drivers = with pkgs; [ gutenprint hplip splix ];
+      drivers = with pkgs; [
+        gutenprint
+        hplip
+        splix
+      ];
     };
 
     avahi = {
@@ -140,6 +144,7 @@
       enable = false;
       allowedTCPPorts = [ 631 ];
       allowedUDPPorts = [ 631 ];
+    };
   };
 
   virtualisation.docker = {
