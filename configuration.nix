@@ -185,6 +185,8 @@
   fonts = {
     packages = with pkgs; [
       roboto
+      corefonts
+      vistafonts
       nerd-fonts.jetbrains-mono
       nerd-fonts.fira-code
       nerd-fonts.symbols-only
