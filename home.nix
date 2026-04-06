@@ -45,7 +45,7 @@
       pyprland
       google-chrome
       chromedriver
-      onlyoffice-bin
+      onlyoffice-desktopeditors
       (yazi.override {
         _7zz = _7zz-rar;
       })
