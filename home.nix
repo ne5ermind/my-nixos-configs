@@ -69,13 +69,19 @@
     };
   };
 
-  services.flameshot = {
-    enable = true;
-    settings = {
-      General = {
-        useGrimAdapter = true;
-        disabledGrimWarning = true;
+  services = {
+    flameshot = {
+      enable = true;
+      settings = {
+        General = {
+          useGrimAdapter = true;
+          disabledGrimWarning = true;
+        };
       };
+    };
+
+    udiskie = {
+      enable = true;
     };
   };
 

@@ -135,6 +135,8 @@
     udev.extraRules = ''
       ACTION=="add|change", SUBSYSTEM=="input", ATTRS{id/vendor}=="2808", ATTRS{id/product}=="0106", ENV{ID_INPUT_MOUSE}="0", ENV{ID_INPUT_TOUCHPAD}="1"
     '';
+
+    udisks2.enable = true;
   };
 
   networking = {
