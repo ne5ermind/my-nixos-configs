@@ -60,7 +60,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      flclashx = import ./flclashx.nix { inherit pkgs; };
+      flclashx = import ./flakes/flclashx.nix { inherit pkgs; };
     in
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
