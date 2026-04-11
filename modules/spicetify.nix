@@ -2,7 +2,7 @@
 {
   programs.spicetify = {
     enable = true;
-    theme = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.themes.blackout;
+    theme = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.themes.nightlight;
     enabledExtensions =
       with inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.extensions; [
         adblock
