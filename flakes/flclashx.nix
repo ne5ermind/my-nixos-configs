@@ -11,7 +11,6 @@ pkgs.appimageTools.wrapType2 {
     pkgs: with pkgs; [
       libayatana-appindicator
       gtk3
-      gtk5
       libepoxy
     ];
 }
