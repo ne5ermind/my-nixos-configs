@@ -49,9 +49,9 @@
       (yazi.override {
         _7zz = _7zz-rar;
       })
-      (discord.override {
-        withVencord = true;
-      })
+      #     (discord.override {
+      #       withVencord = true;
+      #     })
     ];
 
     pointerCursor = {
