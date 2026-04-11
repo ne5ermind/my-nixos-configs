@@ -933,7 +933,7 @@
       fd
       statix
       nixfmt-rfc-style
-      nodePackages.eslint_d
+      # nodePackages.eslint_d
       selene
     ];
 
