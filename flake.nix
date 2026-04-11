@@ -57,10 +57,18 @@
       home-manager,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      flclashx = import ./flclashx.nix { inherit pkgs; };
+    in
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
         modules = [
           ./configuration.nix
+          {
+            environment.systemPackages = [ flclashx ];
+          }
           home-manager.nixosModules.home-manager
           {
             home-manager = {
