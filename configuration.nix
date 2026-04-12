@@ -208,14 +208,14 @@
     polkit.enable = true;
     rtkit.enable = true;
 
-    wrappers = {
-      flclashx = {
-        owner = "root";
-        group = "root";
-        capabilities = "cap_net_admin,cap_net_bind_service+ep";
-        source = "${flclashx}/bin/flclashx";
-      };
-    };
+    #   wrappers = {
+    #     flclashx = {
+    #       owner = "root";
+    #       group = "root";
+    #       capabilities = "cap_net_admin,cap_net_bind_service+ep";
+    #       source = "${flclashx}/bin/flclashx";
+    #     };
+    #   };
   };
 
   console.useXkbConfig = true;
