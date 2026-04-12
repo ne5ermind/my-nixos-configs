@@ -938,13 +938,13 @@
     ];
 
     filetype.extension.ipynb = "python";
-  };
 
-  python3Dependencies =
-    ps: with ps; [
-      pynvim
-      jupyter-client
-      ipykernel
-      nbformat
-    ];
+    python3Dependencies =
+      ps: with ps; [
+        pynvim
+        jupyter-client
+        ipykernel
+        nbformat
+      ];
+  };
 }
