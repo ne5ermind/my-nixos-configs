@@ -64,11 +64,11 @@
     in
     {
       nixosConfigurations.nevernix = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit flclashx; };
+
         modules = [
           ./configuration.nix
-          {
-            environment.systemPackages = [ flclashx ];
-          }
+
           home-manager.nixosModules.home-manager
           {
             home-manager = {

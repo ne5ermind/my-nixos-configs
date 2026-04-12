@@ -64,6 +64,7 @@
       papirus-icon-theme
       kdePackages.qt6ct
       appimage-run
+      flclashx
       # winboat
     ];
 
