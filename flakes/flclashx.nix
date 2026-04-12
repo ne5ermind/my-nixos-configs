@@ -10,7 +10,11 @@ pkgs.appimageTools.wrapType2 {
   extraPkgs =
     pkgs: with pkgs; [
       libayatana-appindicator
+      libappindicator-gtk3
       gtk3
       libepoxy
+      glib
+      cacert
+      hicolor-icon-theme
     ];
 }
