@@ -644,7 +644,6 @@
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
         "spicetify-nix": "spicetify-nix",
-        "spotatui": "spotatui",
         "zen-browser": "zen-browser"
       }
     },
@@ -666,22 +665,6 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "type": "github"
-      }
-    },
-    "spotatui": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1776338667,
-        "narHash": "sha256-aG4nIE/lfjIEKawkE4d+hArdvmagpVC055qRcwqTNyw=",
-        "owner": "LargeModGames",
-        "repo": "spotatui",
-        "rev": "2bd2fe3cfc7d35c743360ebfad5520151146f500",
-        "type": "github"
-      },
-      "original": {
-        "owner": "LargeModGames",
-        "repo": "spotatui",
         "type": "github"
       }
     },
