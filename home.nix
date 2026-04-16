@@ -40,18 +40,18 @@
       hunspellDicts.uk_UA
       hunspellDicts.th_TH
       dbeaver-bin
-      v2raya
+      # v2raya
       geeqie
       pyprland
-      google-chrome
-      chromedriver
+      # google-chrome
+      # chromedriver
       onlyoffice-desktopeditors
       (yazi.override {
         _7zz = _7zz-rar;
       })
-      #     (discord.override {
-      #       withVencord = true;
-      #     })
+      (discord.override {
+        withVencord = true;
+      })
 
       n2048
       bastet
