@@ -52,6 +52,11 @@
       #     (discord.override {
       #       withVencord = true;
       #     })
+
+      n2048
+      bastet
+      ninvaders
+      nsnake
     ];
 
     pointerCursor = {
