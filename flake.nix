@@ -31,13 +31,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spotatui = {
-      url = "github:LargeModGames/spotatui";
-      flake = false;
-    };
+    #   spotatui = {
+    #     url = "github:LargeModGames/spotatui";
+    #     flake = false;
+    #   };
 
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "github:hyprwm/Hyprland?ref=refs/tags/v0.54.3";
     };
 
     hyprland-plugins = {
