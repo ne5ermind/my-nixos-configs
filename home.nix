@@ -43,7 +43,7 @@
       # v2raya
       geeqie
       pyprland
-      # google-chrome
+      google-chrome
       # chromedriver
       onlyoffice-desktopeditors
       (yazi.override {
