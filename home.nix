@@ -41,6 +41,8 @@
       hunspellDicts.th_TH
       dbeaver-bin
       # v2raya
+      7
+      zip
       geeqie
       pyprland
       lsof
